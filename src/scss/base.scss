@@ -6,7 +6,7 @@
 // @import "base/popup";
 
 // Стили спойлеров
-// @import "base/spollers";
+@import "base/spollers";
 
 // Стили табов
 // @import "base/tabs";
@@ -124,4 +124,37 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+
+%linkDecoration {
+	text-decoration: underline $mainColor from-font;
+	text-underline-offset: 3px;
+	transition: $transition ease text-decoration, $transition opacity 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.6;
+			text-decoration: underline transparent from-font;
+		}
+	}
+}
+
+%linkDecorationHover {
+	text-decoration: underline transparent from-font;
+	text-underline-offset: 3px;
+	transition: $transition ease text-decoration, $transition opacity 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.6;
+			text-decoration: underline $mainColor from-font;
+		}
+	}
+	@media (any-hover: none) {
+		text-decoration: underline $mainColor from-font;
+	}
+}
+
+%container {
+	padding: 0 rem(math.div($containerPadding, 2));
 }

@@ -1,18 +1,354 @@
-//====================================================================================================
+// header ====================================================================================================
+.header {
+	// .header__delivery
+	&__delivery {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: rem(30);
+		background-color: $Line;
+		@extend %container;
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: math.div(15, 14);
 
-//====================================================================================================
+		a {
+			@extend %linkDecoration;
+			color: $Blue;
+			text-align: center;
+		}
+	}
+
+	// .header__wrapper
+	&__wrapper {
+		background-color: $White;
+		transition: $transition ease box-shadow 0s;
+
+		.header-fixed & {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 51;
+			box-shadow: $shadow;
+		}
+	}
+
+	// .header__container
+	&__container {
+	}
+
+	// .header__top
+	&__top {
+		@include adaptiveValue("padding-top", 18, 12);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (min-width: $mobileM) {
+			@include adaptiveValue("padding-bottom", 18, 8, 1280, 575, 1);
+		}
+		@media (max-width: $mobileM) {
+			@include adaptiveValue("padding-bottom", 18, 12);
+		}
+	}
+
+	// .header__burger
+	&__burger {
+		@media (min-width: $mobileM) {
+			display: none;
+		}
+		@media (max-width: $mobileM) {
+			flex: 0 1 50%;
+		}
+	}
+
+	&__language,
+	&__controls {
+		flex: 0 1 50%;
+	}
+
+	// .header__language
+	&__language {
+	}
+
+	// .header__logo
+	&__logo {
+		display: flex;
+		justify-content: center;
+		flex: 1 0 45%;
+
+		@media (max-width: $mobileM) {
+			flex: 1 0 60%;
+		}
+
+		.logo__link {
+			@include adaptiveValue("max-width", 249, 140);
+		}
+	}
+
+	// .header__controls
+	&__controls {
+	}
+
+	// .header__menu
+	&__menu {
+		@include adaptiveValue("padding-top", 18, 0, 1280, 575, 1);
+		@include adaptiveValue("padding-bottom", 18, 8, 1280, 575, 1);
+
+		@media (max-width: $mobileM) {
+			position: fixed;
+			z-index: 2;
+			top: -150%;
+			left: 0;
+			right: 0;
+			background: $White;
+			height: 100%;
+			min-height: 100vh;
+			overflow-y: auto;
+			@include adaptiveValue("padding-top", 90, 84);
+			padding: 0 rem(math.div($containerPadding, 2)) rem(40);
+			display: grid;
+			align-items: flex-start;
+			align-content: flex-start;
+			transition: 0.5s ease top 0s;
+
+			&::before {
+				content: "";
+				background: $White;
+				@include adaptiveValue("height", 80, 74, 575, 320);
+				position: fixed;
+				z-index: 2;
+				top: -150%;
+				left: 0;
+				right: 0;
+				transition: 0.5s ease top 0s;
+			}
+
+			.menu-open & {
+				top: 0;
+
+				&::before {
+					top: 0;
+				}
+			}
+
+			.header-controls__link {
+				display: flex;
+				align-items: center;
+				column-gap: rem(12);
+				font-weight: 600;
+				font-size: rem(12);
+				line-height: math.div(13, 12);
+				letter-spacing: rem(1.2);
+				text-transform: uppercase;
+				padding-top: rem(12);
+				padding-bottom: rem(12);
+
+				&::before {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+}
+
+.language {
+	// .language__item
+	&__item {
+		position: relative;
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: math.div(20, 14);
+
+		@media (max-width: $mobileM) {
+			font-size: rem(12);
+			line-height: math.div(13, 12);
+			letter-spacing: rem(1.2);
+			text-transform: uppercase;
+			padding-top: rem(12);
+			padding-bottom: rem(12);
+
+			& > a {
+				&::before {
+					margin-right: rem(4);
+				}
+			}
+		}
+
+		& > a {
+			display: inline-flex;
+			align-items: center;
+			column-gap: rem(8);
+
+			&::before {
+				@include adaptiveValue("font-size", 24, 18);
+			}
+			&::after {
+				content: "\e90b";
+				@extend %ic;
+				@include adaptiveValue("font-size", 20, 15);
+				transition: $transition ease transform 0s;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					&::before {
+						animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+					}
+				}
+			}
+		}
+	}
+
+	// .language__link
+	&__link {
+		&._spoller-active {
+			&::after {
+				transform: rotate(180deg);
+			}
+
+			& + .language__sub-menu {
+				opacity: 1;
+				pointer-events: all;
+			}
+		}
+	}
+
+	// .language__sub-menu
+	&__sub-menu {
+		display: grid;
+		row-gap: rem(8);
+		padding: rem(16) rem(24);
+		opacity: 0;
+		pointer-events: none;
+
+		@media (min-width: $mobileM) {
+			position: absolute;
+			left: 0;
+			bottom: rem(0);
+			transform: translateY(100%);
+			background-color: $White;
+			box-shadow: $shadow;
+		}
+		@media (max-width: $mobileM) {
+			padding-left: rem(30);
+			row-gap: rem(16);
+		}
+
+		a {
+			font-weight: 500;
+			@extend %linkDecorationHover;
+		}
+	}
+}
+
+.logo {
+	// .logo__link
+	&__link {
+		display: inline-block;
+	}
+
+	a.logo__link {
+		@media (any-hover: hover) {
+			transition: $transition ease opacity 0s;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+}
+
+.header-controls {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@include adaptiveValue("column-gap", 48, 12);
+	@include adaptiveValue("font-size", 24, 20);
+
+	// .header-controls__item
+	&__item {
+	}
+
+	// .header-controls__link
+	&__link {
+		@media (any-hover: hover) {
+			transition: $transition ease color 0s;
+
+			&:hover {
+				color: $Red;
+			}
+		}
+
+		span {
+			@media (min-width: $mobileM) {
+				display: none;
+			}
+		}
+	}
+}
+
+.menu {
+	// .menu__nav
+	&__nav {
+		@media (max-width: $mobileM) {
+			border-bottom: 1px solid $Line;
+			margin: 0 rem(-(math.div($containerPadding, 2))) rem(12);
+			padding: 0 rem(math.div($containerPadding, 2)) rem(12);
+		}
+	}
+
+	// .menu__list
+	&__list {
+		display: grid;
+		@include adaptiveValue("column-gap", 48, 24, 1280, 992, 1);
+		row-gap: rem(8);
+
+		@media (min-width: $mobileM) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		a {
+			font-weight: 500;
+			font-size: rem(12);
+			line-height: math.div(13, 12);
+			letter-spacing: rem(1.2);
+			text-transform: uppercase;
+
+			@media (min-width: $mobileM) {
+				@include adaptiveValue("font-size", 12, 11, 1280, 575, 1);
+			}
+			@media (max-width: $mobileM) {
+				display: block;
+				padding-top: rem(12);
+				padding-bottom: rem(12);
+				font-weight: 600;
+			}
+
+			@media (any-hover: hover) {
+				transition: $transition ease color 0s;
+
+				&:hover {
+					color: $Red;
+				}
+			}
+		}
+	}
+}
 
 //Burger
-/*
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+
+	@media (max-width: $mobileM) {
 		display: block;
 		position: relative;
-		width: rem(30);
-		height: rem(18);
+		width: rem(24);
+		height: rem(14);
 		cursor: pointer;
 		z-index: 5;
+
 		span,
 		&::before,
 		&::after {
@@ -22,17 +358,22 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: $mainColor;
+			border-radius: rem(5);
 		}
+
 		&::before {
 			top: 0;
 		}
+
 		&::after {
 			bottom: 0;
 		}
+
 		span {
 			top: calc(50% - rem(1));
 		}
+
 		.menu-open & {
 			span {
 				width: 0;
@@ -40,6 +381,7 @@
 			&::before,
 			&::after {
 			}
+
 			&::before {
 				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
@@ -51,4 +393,3 @@
 		}
 	}
 }
-*/
