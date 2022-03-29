@@ -69,6 +69,16 @@
 
 	// .header__language
 	&__language {
+		.language__sub-menu {
+			@media (min-width: $mobileM) {
+				position: absolute;
+				left: 0;
+				bottom: rem(0);
+				transform: translateY(100%);
+				background-color: $White;
+				box-shadow: $shadow;
+			}
+		}
 	}
 
 	// .header__logo
@@ -149,6 +159,32 @@
 				}
 			}
 		}
+
+		.menu__list {
+			@media (min-width: $mobileM) {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+
+			a {
+				font-weight: 500;
+				font-size: rem(12);
+				line-height: math.div(13, 12);
+				letter-spacing: rem(1.2);
+				text-transform: uppercase;
+
+				@media (min-width: $mobileM) {
+					@include adaptiveValue("font-size", 12, 11, 1280, 575, 1);
+				}
+				@media (max-width: $mobileM) {
+					display: block;
+					padding-top: rem(12);
+					padding-bottom: rem(12);
+					font-weight: 600;
+				}
+			}
+		}
 	}
 }
 
@@ -207,7 +243,6 @@
 			}
 
 			& + .language__sub-menu {
-				opacity: 1;
 				pointer-events: all;
 			}
 		}
@@ -215,23 +250,18 @@
 
 	// .language__sub-menu
 	&__sub-menu {
-		display: grid;
-		row-gap: rem(8);
 		padding: rem(16) rem(24);
-		opacity: 0;
 		pointer-events: none;
 
-		@media (min-width: $mobileM) {
-			position: absolute;
-			left: 0;
-			bottom: rem(0);
-			transform: translateY(100%);
-			background-color: $White;
-			box-shadow: $shadow;
-		}
 		@media (max-width: $mobileM) {
 			padding-left: rem(30);
 			row-gap: rem(16);
+		}
+
+		li {
+			&:not(:last-child) {
+				margin-bottom: rem(8);
+			}
 		}
 
 		a {
@@ -303,29 +333,7 @@
 		@include adaptiveValue("column-gap", 48, 24, 1280, 992, 1);
 		row-gap: rem(8);
 
-		@media (min-width: $mobileM) {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-		}
-
 		a {
-			font-weight: 500;
-			font-size: rem(12);
-			line-height: math.div(13, 12);
-			letter-spacing: rem(1.2);
-			text-transform: uppercase;
-
-			@media (min-width: $mobileM) {
-				@include adaptiveValue("font-size", 12, 11, 1280, 575, 1);
-			}
-			@media (max-width: $mobileM) {
-				display: block;
-				padding-top: rem(12);
-				padding-bottom: rem(12);
-				font-weight: 600;
-			}
-
 			@media (any-hover: hover) {
 				transition: $transition ease color 0s;
 

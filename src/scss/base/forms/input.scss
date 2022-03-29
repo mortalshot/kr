@@ -8,18 +8,29 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
-.input {
-	border-radius: 0 !important;
+
+.form__input {
+	border-radius: rem(4) !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&._form-focus {
+	padding: rem(12) rem(16);
+	@include adaptiveValue("min-height", 50, 47);
+	border: 1px solid $Grey;
+	background-color: transparent;
+
+	&::placeholder {
+		transition: $transition ease opacity 0s;
 	}
-	&._form-error {
+
+	&:focus {
+		border-color: $mainColor;
+		outline: 0;
+
+		&::placeholder {
+			opacity: 0;
+		}
 	}
 }
-textarea.input {
+textarea.form__input {
 	resize: none;
-	padding: 0px 0px;
 }

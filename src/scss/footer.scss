@@ -1,3 +1,340 @@
-//====================================================================================================
+// footer ====================================================================================================
+.footer {
+    background-color: $Blue;
+    color: $White;
+
+    // .footer__subscribe
+    &__subscribe {
+        @include adaptiveValue("padding-top", 50, 40);
+        @include adaptiveValue("padding-bottom", 50, 40);
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba($color: $White, $alpha: 0.2);
+        }
+    }
+
+    // .footer__container
+    &__container {
+    }
+
+    &__top,
+    &__bottom {
+        display: flex;
+        column-gap: rem(24);
+    }
+
+    // .footer__top
+    &__top {
+        @media (min-width: $mobile) {
+            align-items: flex-start;
+            @include adaptiveValue("padding-top", 72, 50);
+            @include adaptiveValue("padding-bottom", 72, 50);
+            @include adaptiveValue("font-size", 14, 12);
+            line-height: math.div(20, 14);
+        }
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__left,
+    &__right {
+        flex: 0 1 50%;
+    }
+
+    // .footer__left
+    &__left {
+    }
+
+    // .footer__logo
+    &__logo {
+        @media (min-width: $mobile) {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 48, 24);
+            }
+        }
+    }
+
+    // .footer__privacy
+    &__privacy {
+        @media (min-width: $mobile) {
+            display: grid;
+            row-gap: rem(16);
+
+            a {
+                color: rgba($color: $White, $alpha: 0.5);
+                text-decoration: underline transparent from-font;
+                text-underline-offset: 3px;
+                transition: $transition ease text-decoration 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        text-decoration: underline rgba($color: $White, $alpha: 0.5) from-font;
+                    }
+                }
+            }
+        }
+    }
+
+    // .footer__center
+    &__center {
+        @media (min-width: $mobile) {
+            flex: 1 0 percent(478, 1180);
+        }
+    }
+
+    // .footer__menu
+    &__menu {
+        @media (min-width: $mobile) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: rem(16);
+            max-width: rem(478);
+            margin-left: auto;
+            margin-right: auto;
+
+            .menu {
+                // .menu__list
+                &__list {
+                    row-gap: rem(16);
+                }
+            }
+        }
+    }
+
+    // .footer__right
+    &__right {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    // .footer__language
+    &__language {
+        @media (min-width: $mobile) {
+            &:not(:last-child) {
+                margin-bottom: rem(32);
+            }
+
+            .language {
+                // .language__item
+                &__item {
+                }
+
+                // .language__link
+                &__link {
+                }
+
+                // .language__sub-menu
+                &__sub-menu {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    // .footer__contacts
+    &__contacts {
+        @media (min-width: $mobile) {
+            display: grid;
+            gap: rem(16);
+        }
+    }
+
+    // .footer__contact
+    &__contact {
+        @media (min-width: $mobile) {
+            color: rgba($color: $White, $alpha: 0.5);
+            text-decoration: underline transparent from-font;
+            text-underline-offset: 3px;
+            transition: $transition ease text-decoration 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline rgba($color: $White, $alpha: 0.5) from-font;
+                }
+            }
+            @media (any-hover: none) {
+                text-decoration: underline rgba($color: $White, $alpha: 0.5) from-font;
+            }
+        }
+    }
+
+    // .footer__bottom
+    &__bottom {
+        padding-top: rem(40);
+        padding-bottom: rem(40);
+        align-items: center;
+
+        @media (max-width: $mobileM) {
+            display: grid;
+            row-gap: rem(24);
+        }
+
+        .footer__right {
+            @media (max-width: $mobileM) {
+                display: none;
+            }
+        }
+    }
+
+    // .footer__social
+    &__social {
+        @media (max-width: $mobileM) {
+            justify-content: center;
+        }
+    }
+
+    // .footer__kan
+    &__kan {
+        display: flex;
+        justify-content: center;
+
+        a {
+            opacity: 0.5;
+
+            @media (any-hover: hover) {
+                transition: $transition ease opacity 0s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // .footer__payments
+    &__payments {
+        @media (min-width: $mobileM) {
+            display: flex;
+            align-items: center;
+            column-gap: rem(16);
+            opacity: 0.5;
+        }
+    }
+
+    // .footer__payment
+    &__payment {
+        @media (min-width: $mobileM) {
+            @include adaptiveValue("max-width", 51, 40);
+        }
+    }
+}
+
+.subscribe {
+    // .subscribe__container
+    &__container {
+        display: grid;
+        align-items: flex-start;
+        column-gap: rem(16);
+        row-gap: rem(24);
+
+        @media (min-width: $mobileSmall) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    // .subscribe__body
+    &__body {
+        display: grid;
+        row-gap: rem(18);
+        column-gap: rem(20);
+
+        @media (min-width: $mobile) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // .subscribe__caption
+    &__caption {
+        font-weight: 700;
+        @include adaptiveValue("font-size", 30, 22);
+        line-height: math.div(43, 30);
+    }
+
+    // .subscribe__text
+    &__text {
+        color: rgba($color: $White, $alpha: 0.5);
+        @include adaptiveValue("font-size", 14, 12);
+        line-height: math.div(20, 14);
+        max-width: rem(230);
+    }
+
+    // .subscribe__form
+    &__form {
+        display: flex;
+
+        .form {
+            // .form__row
+            &__row {
+                width: 100%;
+
+                @media (min-width: $mobile) {
+                    max-width: rem(406);
+                    margin-left: auto;
+                }
+                @media (max-width: $mobile) {
+                    row-gap: rem(18);
+                }
+            }
+
+            // .form__item
+            &__item {
+                margin-bottom: 0;
+            }
+
+            // .form__input
+            &__input {
+                min-height: rem(48);
+                @include adaptiveValue("font-size", 14, 12);
+                color: $White;
+                border-color: rgba($color: $White, $alpha: 0.2);
+                transition: $transition ease border-color 0s;
+
+                &:focus {
+                    border-color: rgba($color: $White, $alpha: 0.5);
+                }
+            }
+        }
+
+        .btn {
+            @include adaptiveValue("font-size", 14, 12);
+            min-height: rem(48);
+        }
+    }
+
+    // subscribe__row
+    &__row {
+        display: flex;
+        column-gap: rem(16);
+        row-gap: rem(18);
+        width: 100%;
+        max-width: rem(406);
+        margin-left: auto;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: rem(40);
+
+    // .social__item
+    &__item {
+        max-width: rem(24);
+        opacity: 0.5;
+
+        @media (any-hover: hover) {
+            transition: $transition ease transform, $transition opacity 0s;
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(rem(3));
+            }
+        }
+    }
+}
 
 //====================================================================================================

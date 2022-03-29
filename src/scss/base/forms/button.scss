@@ -1,14 +1,27 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
-.button {
+.btn {
 	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: math.div(19, 16);
+	text-align: center;
+	padding: rem(15) rem(24);
+	@include adaptiveValue("min-height", 50, 47);
+	border-radius: rem(4);
+
+	&_white {
+		background-color: $White;
+		color: $Blue;
+
+		@media (any-hover: hover) {
+			transition: $transition ease background-color 0s;
+			&:hover {
+				background-color: #e2e6eb;
+			}
 		}
-	}
-	&._fw {
-		width: 100%;
 	}
 }
