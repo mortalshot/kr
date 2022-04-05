@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Каталог"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="catalog">
+                <div class="catalog__container">
+                    <div class="catalog__row">
+                        <div class="catalog__left  catalog__breadcrumbs breadcrumbs">
+                            <div class="breadcrumbs__wrapper" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                                <span class="breadcrumbs__link" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="home.html" itemprop="item">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                </span>
+                                <span class="breadcrumbs__separator">\</span>
+                                <span class="breadcrumbs__title">Хиты</span>
+                            </div>
+                        </div>
+                        <div class="catalog__right catalog__heading">
+                            <h1 class="catalog__title">
+                                <span>хиты</span>
+                                <span>Каталог</span>
+                            </h1>
+
+                            <form class="catalog__sorting" method="get">
+                                <!-- Если нужна ссылка, то атрибуту option добавляем data-href -->
+                                <select name="orderby" class="select">
+                                    <option value="menu_order">Исходная сортировка</option>
+                                    <option value="popularity">По популярности</option>
+                                    <option value="rating">По рейтингу</option>
+                                    <option value="date">Сортировка от последнего</option>
+                                    <option value="price">Цены: по возрастанию</option>
+                                    <option value="price-desc">Цены: по убыванию</option>
+                                </select>
+                            </form>
+
+                            <button class="catalog__filter-btn btn btn_border-black _icon-filter">Фильтры</button>
+                        </div>
+                    </div>
+                    <div class="catalog__row" data-sticky="767.98, min" data-sticky-header>
+                        <div class="catalog__left catalog__sidebar">
+                            <form action="" class="catalog__filter filter" data-sticky-item>
+                                <div class="filter__wrapper">
+                                    <div class="filter__caption">Фильтр</div>
+
+                                    <div data-spollers class="filter__items">
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__caption">ТИП</button>
+                                            <div class="item-filter__body">
+                                                <div class="options__item">
+                                                    <input hidden id="filter-type-1" class="options__input" checked type="radio" value="Слитный" name="filter-type">
+                                                    <label for="filter-type-1" class="options__label"><span class="options__text">Слитный</span></label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <input hidden id="filter-type-2" class="options__input" type="radio" value="Раздельный" name="filter-type">
+                                                    <label for="filter-type-2" class="options__label"><span class="options__text">Раздельный</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__caption">Цена</button>
+                                            <div class="item-filter__body">
+                                                <div class="options__item">
+                                                    <input hidden id="filter-price-1" class="options__input" checked type="radio" value="0 — 69" name="filter-price">
+                                                    <label for="filter-price-1" class="options__label"><span class="options__text">0 — 69</span></label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <input hidden id="filter-price-2" class="options__input" type="radio" value="70 — 99" name="filter-price">
+                                                    <label for="filter-price-2" class="options__label"><span class="options__text">70 — 99</span></label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <input hidden id="filter-price-3" class="options__input" type="radio" value="100 — 149" name="filter-price">
+                                                    <label for="filter-price-3" class="options__label"><span class="options__text">100 — 149</span></label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <input hidden id="filter-price-4" class="options__input" type="radio" value="150 — 199" name="filter-price">
+                                                    <label for="filter-price-4" class="options__label"><span class="options__text">150 — 199</span></label>
+                                                </div>
+                                                <div class="options__item">
+                                                    <input hidden id="filter-price-5" class="options__input" type="radio" value="200 +" name="filter-price">
+                                                    <label for="filter-price-5" class="options__label"><span class="options__text">200 +</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__caption">Цвет</button>
+                                            <div class="item-filter__body">
+                                                <div class="checkbox">
+                                                    <input id="filter-color-1" class="checkbox__input" type="checkbox" value="Чёрный" name="Чёрный">
+                                                    <label for="filter-color-1" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #1A1E22;"></span>
+                                                        <span class="checkbox__text">Чёрный</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-2" class="checkbox__input" type="checkbox" value="Белый" name="Белый">
+                                                    <label for="filter-color-2" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #FFFFFF; border-color: #1A1E22;"></span>
+                                                        <span class="checkbox__text">Белый</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-3" class="checkbox__input" type="checkbox" value="Синий" name="Синий">
+                                                    <label for="filter-color-3" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #0C72DE;"></span>
+                                                        <span class="checkbox__text">Синий</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-4" class="checkbox__input" type="checkbox" value="Красный" name="Красный">
+                                                    <label for="filter-color-4" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #FF3400;"></span>
+                                                        <span class="checkbox__text">Красный</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-5" class="checkbox__input" type="checkbox" value="Оранжевый" name="Оранжевый">
+                                                    <label for="filter-color-5" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #FF8B68;"></span>
+                                                        <span class="checkbox__text">Оранжевый</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-6" class="checkbox__input" type="checkbox" value="Жёлтый" name="Жёлтый">
+                                                    <label for="filter-color-6" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #FFD700;"></span>
+                                                        <span class="checkbox__text">Жёлтый</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-7" class="checkbox__input" type="checkbox" value="Розовый" name="Розовый">
+                                                    <label for="filter-color-7" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #C266D9;"></span>
+                                                        <span class="checkbox__text">Розовый</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-8" class="checkbox__input" type="checkbox" value="Голубой" name="Голубой">
+                                                    <label for="filter-color-8" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #40CBF8;"></span>
+                                                        <span class="checkbox__text">Голубой</span>
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-color-9" class="checkbox__input" type="checkbox" value="Зелёный" name="Зелёный">
+                                                    <label for="filter-color-9" class="checkbox__label">
+                                                        <span class="_filter-color-box" style="background-color: #61CD4F;"></span>
+                                                        <span class="checkbox__text">Зелёный</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__item item-filter">
+                                            <button type="button" data-spoller class="item-filter__caption">Размер</button>
+                                            <div class="item-filter__body">
+                                                <div class="checkbox">
+                                                    <input id="filter-size-1" class="checkbox__input" type="checkbox" value="XS" name="XS">
+                                                    <label for="filter-size-1" class="checkbox__label"> <span class="checkbox__text">XS</span> </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-size-2" class="checkbox__input" type="checkbox" value="S" name="S">
+                                                    <label for="filter-size-2" class="checkbox__label"> <span class="checkbox__text">S</span> </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-size-3" class="checkbox__input" type="checkbox" value="M" name="M">
+                                                    <label for="filter-size-3" class="checkbox__label"> <span class="checkbox__text">M</span> </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-size-4" class="checkbox__input" type="checkbox" value="L" name="L">
+                                                    <label for="filter-size-4" class="checkbox__label"> <span class="checkbox__text">L</span> </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input id="filter-size-5" class="checkbox__input" type="checkbox" value="XL" name="XL">
+                                                    <label for="filter-size-5" class="checkbox__label"> <span class="checkbox__text">XL</span> </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <button type="button" class="filter__close _icon-spoller"></button>
+                        </div>
+
+                        <div class="catalog__right">
+                            <div class="catalog__list">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-1-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-2-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Собрал текстов реторический за большой?</div>
+                                            <div class="product-card__price price"> 101 990 ₽</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-3-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-4-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-5-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Далеко-далеко</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-6-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-7-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="" class="catalog__btn btn btn_border-white">Показать ещё</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

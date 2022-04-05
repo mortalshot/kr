@@ -1,5 +1,6 @@
 .checkbox {
 	position: relative;
+
 	&:not(:last-child) {
 		margin-bottom: em(5);
 	}
@@ -9,29 +10,53 @@
 		width: 0;
 		height: 0;
 		opacity: 0;
-		&:focus + .checkbox__label:before {
-			box-shadow: 0 0 5px #000;
-		}
-		&:checked + .checkbox__label:before {
-			background: #000;
+
+		&:checked {
+			& + .checkbox__label {
+				color: $mainColor;
+
+				&::before {
+					border-color: $mainColor;
+					background-color: $mainColor;
+				}
+			}
 		}
 	}
+
 	// .checkbox__label
 	&__label {
 		cursor: pointer;
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		position: relative;
-		gap: 10px;
-		&:before {
+		gap: rem(8);
+		transition: $transition ease color 0s;
+
+		&::before,
+		&::after {
+			border-radius: rem(4);
+		}
+		&::before {
 			content: "";
-			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
+			flex: 0 0 rem(16);
+			width: rem(16);
+			height: rem(16);
+			border: 1px solid $Grey;
+			background-color: $White;
+			transition: $transition ease border-color, $transition background-color 0s;
+		}
+		&::after {
+			content: "\e911";
+			@extend %ic;
+			flex: 0 0 rem(10);
+			width: rem(10);
+			height: rem(10);
+			top: calc(50% - rem(7));
+			font-size: rem(14);
+			color: $White;
 		}
 	}
+
 	// .checkbox__text
 	&__text {
 	}

@@ -3,7 +3,7 @@
 @import "base/forms/forms";
 
 // Стили попапов
-// @import "base/popup";
+@import "base/popup";
 
 // Стили спойлеров
 @import "base/spollers";
@@ -21,7 +21,7 @@
 // @import "base/fullscreen";
 
 // Стили для липкого блока
-// @import "base/sticky";
+@import "base/sticky";
 
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
@@ -157,4 +157,9 @@
 
 %container {
 	padding: 0 rem(math.div($containerPadding, 2));
+}
+%firstletter {
+	&::first-letter {
+		@include adaptiveValue("padding-left", 64, 48);
+	}
 }

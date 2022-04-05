@@ -1,5 +1,5 @@
 // Подключение функционала 
-import { isMobile } from "./functions.js";
+import { isMobile, bodyLock, bodyUnlock } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -21,3 +21,22 @@ window.addEventListener('scroll', function () {
         mainPage.style.paddingTop = 0;
     }
 })
+
+
+const sidebar = document.querySelector('.catalog__sidebar');
+document.addEventListener("click", documentActions);
+function documentActions(e) {
+    const targetElement = e.target;
+
+    // Фильтр
+    if (targetElement.classList.contains('catalog__filter-btn') || targetElement.closest('.catalog__filter-btn')) {
+        e.preventDefault();
+        sidebar.classList.add('_active');
+        bodyLock();
+    }
+    if (targetElement.classList.contains('filter__close') || targetElement.closest('.filter__close')) {
+        e.preventDefault();
+        sidebar.classList.remove('_active');
+        bodyUnlock();
+    }
+}
