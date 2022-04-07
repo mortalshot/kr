@@ -51,7 +51,9 @@
 			flex: 0 0 rem(10);
 			width: rem(10);
 			height: rem(10);
+			position: absolute;
 			top: calc(50% - rem(7));
+			left: rem(1);
 			font-size: rem(14);
 			color: $White;
 		}

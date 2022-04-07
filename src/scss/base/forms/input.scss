@@ -9,6 +9,26 @@ textarea {
 	appearance: none;
 }
 
+.form__input-wrapper {
+	position: relative;
+
+	&._address {
+		&::after {
+			@extend %ic;
+			content: "\e903";
+			font-size: rem(20);
+			position: absolute;
+			right: rem(15);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		input {
+			padding-right: rem(40);
+		}
+	}
+}
+
 .form__input {
 	border-radius: rem(4) !important;
 	width: 100%;
@@ -17,6 +37,7 @@ textarea {
 	@include adaptiveValue("min-height", 50, 47);
 	border: 1px solid $Grey;
 	background-color: transparent;
+	transition: $transition ease border-color 0s;
 
 	&::placeholder {
 		transition: $transition ease opacity 0s;

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Оформление заказа</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220407163209">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="checkout-page">
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__delivery">
+				<a href="delivery.html">Бесплатная доставка </a>
+			</div>
+
+			<div class="header__wrapper">
+				<div class="header__container">
+					<div class="header__top">
+						<div class="header__burger">
+							<button type="button" class="icon-menu"><span></span></button>
+						</div>
+
+						<div class="header__language language" data-da=".header__menu, 574.98, 2" data-spollers>
+							<div class="language__item">
+								<a href="" class="language__link _icon-language" data-spoller data-spoller-close>
+									<span>Русский</span>
+								</a>
+								<ul class="language__sub-menu">
+									<li><a href="">English</a></li>
+									<li><a href="">German</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="header__logo logo">
+							<a href="home.html" class="logo__link"><img src="img/logo.svg" alt="" loading="lazy"></a>
+						</div>
+
+						<div class="header__controls header-controls">
+							<div class="header-controls__item">
+								<a href="search.html" class="header-controls__link _icon-search" data-tippy-content="Поиск"></a>
+							</div>
+							<div class="header-controls__item" data-da=".header__menu, 574.98, 1">
+								<a href="profile.html" class="header-controls__link _icon-login" data-tippy-content="Профиль"><span>Профиль</span></a>
+							</div>
+							<div class="header-controls__item" data-da=".header__menu, 574.98, 1">
+								<a href="favorites.html" class="header-controls__link _icon-favorites" data-tippy-content="Избранное"><span>Избранное</span></a>
+							</div>
+							<div class="header-controls__item">
+								<a href="cart.html" class="header-controls__link _icon-basket" data-tippy-content="Корзина"></a>
+							</div>
+						</div>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__nav">
+							<ul class="menu__list">
+								<li><a href="archive-product.html">Новинки</a></li>
+								<li><a href="archive-product.html">хиты</a></li>
+								<li><a href="archive-product.html">Слитные купальники</a></li>
+								<li><a href="archive-product.html">Раздельные купальники</a></li>
+								<li><a href="archive-product.html">sale</a></li>
+								<li><a href="">Бесплатная доставка и возврат</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="checkout">
+				<div class="checkout__container">
+					<div class="checkout__heading">
+						<h1 class="checkout__title">Оформление заказа</h1>
+						<a href="cart.html" class="checkout__btn btn btn_border-white">Вернуться в корзину</a>
+					</div>
+
+					<div class="checkout__row">
+						<div class="checkout__body form">
+							<div class="checkout__step">
+								<div class="checkout__caption">01. Введите личные данные</div>
+
+								<div class="form__row">
+									<div class="form__item col-md-6">
+										<label for="checkout-name" class="form__label">Имя</label>
+										<input id="checkout-name" type="text" name="checkout-name" placeholder="" class="form__input">
+									</div>
+									<div class="form__item col-md-6">
+										<label for="checkout-surname" class="form__label">Фамилия</label>
+										<input id="checkout-surname" type="text" name="checkout-surname" placeholder="" class="form__input">
+									</div>
+									<div class="form__item col-md-6">
+										<label for="checkout-phone" class="form__label">Телефон</label>
+										<input id="checkout-phone" type="text" name="checkout-phone" placeholder="+7-___-___-__-__" class="form__input form__input_phone">
+									</div>
+									<div class="form__item col-md-6">
+										<label for="checkout-mail" class="form__label">Почта</label>
+										<input id="checkout-mail" type="email" name="checkout-mail" placeholder="" class="form__input">
+									</div>
+								</div>
+							</div>
+
+							<div class="checkout__step">
+								<div class="checkout__caption">02. Укажите адрес доставки</div>
+
+								<div class="form__row">
+									<div class="form__item col-md-6">
+										<div for="" class="form__label">Страна</div>
+										<select name="" class="select">
+											<option value="Россия" selected>Россия</option>
+											<option value="Беларусь">Беларусь</option>
+											<option value="Казахстан">Казахстан</option>
+											<option value="Венгрия">Венгрия</option>
+											<option value="Украина">Украина</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form__row">
+									<div class="form__item col-md-6">
+										<div for="" class="form__label">Город</div>
+										<select name="" class="select">
+											<option value="Екатеринбург" selected>Екатеринбург</option>
+											<option value="Москва">Москва</option>
+											<option value="Тверь">Тверь</option>
+											<option value="Казань">Казань</option>
+										</select>
+									</div>
+									<div class="form__item col-12">
+										<label for="checkout-issue" class="form__label">Пункт выдачи</label>
+										<div class="form__input-wrapper _address">
+											<input id="checkout-issue" type="text" name="checkout-issue" placeholder="" class="form__input">
+										</div>
+									</div>
+									<div class="form__item col-12">
+										<label for="checkout-comment" class="form__label">Комментарий к заказу</label>
+										<textarea id="checkout-comment" autocomplete="off" name="checkout-comment" placeholder="Любой комментарий" class="form__input"></textarea>
+									</div>
+									<div class="form__item checkout__delivery col-12">
+										<div class="checkbox">
+											<input id="checkout-delivery" class="checkbox__input" type="checkbox" value="Доставка курьером до двери" name="checkout-delivery">
+											<label for="checkout-delivery" class="checkbox__label"><span class="checkbox__text">Доставка курьером до двери</span></label>
+										</div>
+									</div>
+								</div>
+
+								<div class="product-main__delivery product-delivery">
+									<div class="product-delivery__dates"><span>450 ₽</span> 24 — 28 марта</div>
+									<div class="product-delivery__descr">Примерная стоимость и даты доставки</div>
+									<div class="product-delivery__logo"><img src="img/icons/dhl.svg" alt="" loading="lazy"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="checkout__sidebar">
+							<div class="cart__items">
+								<div class="cart__item cart-item">
+									<div class="cart-item__img"><picture><source srcset="img/products/product-1-1.webp" type="image/webp"><img src="img/products/product-1-1.jpg" alt="" loading="lazy"></picture></div>
+									<div class="cart-item__body">
+										<div class="cart-item__wrapper">
+											<div class="cart-item__name">Купальник цельный, чёрный</div>
+											<div class="cart-item__attribute cart-item__size">
+												<div class="cart-item__caption">Размер: 36</div>
+											</div>
+											<div class="cart-item__attribute cart-item__number">
+												<div class="cart-item__caption">Количество: 1</div>
+											</div>
+										</div>
+										<div class="cart-item__price price">
+											<span class="price__new">8 990 ₽</span>
+											<span class="price__old">14 990 ₽</span>
+										</div>
+									</div>
+								</div>
+								<div class="cart__item cart-item">
+									<div class="cart-item__img"><picture><source srcset="img/products/product-2-1.webp" type="image/webp"><img src="img/products/product-2-1.jpg" alt="" loading="lazy"></picture></div>
+									<div class="cart-item__body">
+										<div class="cart-item__wrapper">
+											<div class="cart-item__name">Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Дорогу скатился безопасную рукописи последний?</div>
+											<div class="cart-item__attribute cart-item__size">
+												<div class="cart-item__caption">Размер: 39</div>
+											</div>
+											<div class="cart-item__attribute cart-item__number">
+												<div class="cart-item__caption">Количество: 1</div>
+											</div>
+										</div>
+										<div class="cart-item__price price">14 990 ₽ </div>
+									</div>
+								</div>
+							</div>
+
+							<div class="checkout__sidebar-total total-cart">
+								<div class="total-cart__wrapper">
+									<div class="total-cart__body">
+										<div class="total-cart__list">
+											<div class="total-cart__item">
+												<span>Товары</span>
+												<span>18 928 ₽</span>
+											</div>
+											<div class="total-cart__item">
+												<span>Скидка</span>
+												<span class="_green">-500 ₽</span>
+											</div>
+										</div>
+										<div class="total-cart__resume">
+											<div class="total-cart__caption">Итого</div>
+											<div class="total-cart__resume-val">18 928 ₽</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="checkout__row">
+						<div class="checkout__total total-cart">
+							<div class="total-cart__wrapper">
+								<div class="total-cart__body">
+									<div class="total-cart__list">
+										<div class="total-cart__item">
+											<span>Товары</span>
+											<span>18 928 ₽</span>
+										</div>
+										<div class="total-cart__item">
+											<span>Скидка</span>
+											<span class="_green">-500 ₽</span>
+										</div>
+									</div>
+									<div class="total-cart__resume">
+										<div class="total-cart__caption">Итого</div>
+										<div class="total-cart__resume-val">
+											18 928 ₽ <br>
+											<span>Включая НДС</span>
+										</div>
+									</div>
+								</div>
+								<div class="total-cart__footer">
+									<a href="checkout.html" class="total-cart__btn btn btn_black"> Перейти к оплате </a>
+									<div class="total-cart__descr">Вы будете переведены на страницу банка для оплаты</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__subscribe subscribe">
+				<div class="subscribe__container">
+					<div class="subscribe__body">
+						<div class="subscribe__caption">Подпишись</div>
+						<div class="subscribe__text">Чтобы не пропустить новинки и быть в курсе самых последних событий</div>
+					</div>
+					<form action="" class="subscribe__form form">
+						<div class="subscribe__row">
+							<input autocomplete="off" type="email" name="form[]" placeholder="Введите ваш email" class="form__input">
+							<button class="btn btn_white">Подписаться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="footer__container">
+				<div class="footer__top">
+					<div class="footer__left">
+						<div class="footer__logo logo">
+							<a href="" class="logo__link"><img src="img/logo2.svg" alt="" loading="lazy"></a>
+						</div>
+
+						<ul class="footer__privacy">
+							<li><a href="">Публичная оферта</a></li>
+							<li><a href="">Пользовательское соглашение</a></li>
+						</ul>
+					</div>
+					<div class="footer__center">
+						<nav class="footer__menu menu">
+							<ul class="menu__list">
+								<li><a href="">Хиты</a></li>
+								<li><a href="">Распродажа</a></li>
+								<li><a href="">Новинки</a></li>
+								<li><a href="">Открытые купальники</a></li>
+								<li><a href="">Скрытые купальники</a></li>
+							</ul>
+							<ul class="menu__list">
+								<li><a href="">О компании</a></li>
+								<li><a href="">Доставка и возврат</a></li>
+								<li><a href="">Личный кабинет</a></li>
+								<li><a href="">Таблица размеров</a></li>
+								<li><a href="">FAQ</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__right">
+						<div class="footer__right-wrapper">
+							<div class="footer__language language" data-spollers>
+								<div class="language__item">
+									<a href="" class="language__link _icon-language" data-spoller data-spoller-close>
+										<span>Русский</span>
+									</a>
+									<ul class="language__sub-menu">
+										<li><a href="">English</a></li>
+										<li><a href="">German</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer__contacts">
+								<a href="mailto:info@katerinariazanova.com" class="footer__contact">Info@katerinariazanova.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__left">
+						<div class="footer__social social">
+							<a href="" class="social__item"><img src="img/icons/instagram.svg" alt="" loading="lazy"></a>
+							<a href="" class="social__item"><img src="img/icons/facebook.svg" alt="" loading="lazy"></a>
+							<a href="" class="social__item"><img src="img/icons/vk.svg" alt="" loading="lazy"></a>
+						</div>
+					</div>
+					<div class="footer__center">
+						<div class="footer__kan">
+							<a href="http://thekan.ru/" target="_blank"><img src="img/icons/kan.svg" alt="" loading="lazy"></a>
+						</div>
+					</div>
+					<div class="footer__right">
+						<div class="footer__payments">
+							<div class="footer__payment"><img src="img/icons/payment-1.svg" alt="" loading="lazy"></div>
+							<div class="footer__payment"><img src="img/icons/payment-2.svg" alt="" loading="lazy"></div>
+							<div class="footer__payment"><img src="img/icons/payment-3.svg" alt="" loading="lazy"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script src="js/app.min.js?_v=20220407163209"></script>
+</body>
+
+</html>

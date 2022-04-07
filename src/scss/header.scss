@@ -261,6 +261,10 @@
 		li {
 			&:not(:last-child) {
 				margin-bottom: rem(8);
+
+				@media (max-width: $mobile) {
+					margin-bottom: rem(16);
+				}
 			}
 		}
 
