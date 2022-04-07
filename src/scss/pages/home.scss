@@ -142,7 +142,6 @@
     // .product-card__price
     &__price {
         .price__old {
-            color: $Red;
             @include adaptiveValue("font-size", 12, 10);
         }
     }
@@ -216,8 +215,6 @@ a.product-card {
 
     // .template1__text
     &__text {
-        @include adaptiveValue("font-size", 16, 14);
-
         @media (min-width: $mobile) {
             grid-area: text;
         }

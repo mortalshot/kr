@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Lazy } from 'swiper';
+import Swiper, { Navigation, Lazy, Thumbs } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -102,6 +102,100 @@ function initSliders() {
 				768: {
 					slidesPerView: 3,
 				},
+			},
+
+			// События
+			on: {
+
+			}
+		});
+	}
+	if (document.querySelector('.gallery-product')) { // Указываем скласс нужного слайдера
+
+		let galleryProductMd2 = window.matchMedia('(max-width: 991.98px)');
+		function galleryProductHandleMd2Change(e) {
+			if (e.matches) {
+				const productThumbsSlider = new Swiper('.gallery-product__thumbs', { // Указываем скласс нужного слайдера
+					// Подключаем модули слайдера
+					// для конкретного случая
+					modules: [Thumbs],
+					observer: true,
+					observeParents: true,
+					slidesPerView: 4,
+					spaceBetween: 10,
+					autoHeight: false,
+					watchOverflow: true,
+					speed: 800,
+
+					/* // Ленивая загрузка
+					preloadImages: true,
+					lazy: {
+						loanOnTransitionStart: true,
+						loadPrevNext: true,
+					},
+ */
+					// События
+					on: {
+
+					}
+				});
+				const productSlider = new Swiper('.gallery-product__slider', { // Указываем скласс нужного слайдера
+					// Подключаем модули слайдера
+					// для конкретного случая
+					modules: [Thumbs],
+					observer: true,
+					observeParents: true,
+					slidesPerView: 1,
+					spaceBetween: 20,
+					autoHeight: false,
+					watchOverflow: true,
+					speed: 800,
+
+					// Ленивая загрузка
+					preloadImages: true,
+					lazy: {
+						loanOnTransitionStart: true,
+						loadPrevNext: true,
+					},
+
+					thumbs: {
+						swiper: productThumbsSlider
+					},
+
+					// События
+					on: {
+
+					}
+				});
+			}
+		}
+		galleryProductMd2.addEventListener('change', galleryProductHandleMd2Change);
+		galleryProductHandleMd2Change(galleryProductMd2);
+	}
+	if (document.querySelector('.product-color__slider')) { // Указываем скласс нужного слайдера
+		// Создаем слайдер
+		new Swiper('.product-color__slider', { // Указываем скласс нужного слайдера
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Lazy],
+			slidesPerView: 5,
+			spaceBetween: 8,
+			autoHeight: false,
+			watchOverflow: true,
+			speed: 800,
+
+			// Ленивая загрузка
+			preloadImages: true,
+			lazy: {
+				loanOnTransitionStart: true,
+				loadPrevNext: true,
+			},
+
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.product-color .swiper__button-prev',
+				nextEl: '.product-color .swiper__button-next',
 			},
 
 			// События

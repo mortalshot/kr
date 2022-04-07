@@ -5,8 +5,7 @@
 	<title>Каталог</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220405163243">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220407131524">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +27,7 @@
 
 						<div class="header__language language" data-da=".header__menu, 574.98, 2" data-spollers>
 							<div class="language__item">
-								<a href="" class="language__link _icon-language" data-spoller>
+								<a href="" class="language__link _icon-language" data-spoller data-spoller-close>
 									<span>Русский</span>
 								</a>
 								<ul class="language__sub-menu">
@@ -53,7 +52,7 @@
 								<a href="favorites.html" class="header-controls__link _icon-favorites" data-tippy-content="Избранное"><span>Избранное</span></a>
 							</div>
 							<div class="header-controls__item">
-								<a href="basket.html" class="header-controls__link _icon-basket" data-tippy-content="Корзина"></a>
+								<a href="cart.html" class="header-controls__link _icon-basket" data-tippy-content="Корзина"></a>
 							</div>
 						</div>
 					</div>
@@ -116,10 +115,10 @@
 
 									<div data-spollers class="filter__items">
 										<div class="filter__item item-filter">
-											<button type="button" data-spoller class="item-filter__caption">ТИП</button>
+											<button type="button" data-spoller class="item-filter__caption _spoller-active">ТИП</button>
 											<div class="item-filter__body">
 												<div class="options__item">
-													<input hidden id="filter-type-1" class="options__input" checked type="radio" value="Слитный" name="filter-type">
+													<input hidden id="filter-type-1" class="options__input" type="radio" value="Слитный" name="filter-type">
 													<label for="filter-type-1" class="options__label"><span class="options__text">Слитный</span></label>
 												</div>
 												<div class="options__item">
@@ -132,7 +131,7 @@
 											<button type="button" data-spoller class="item-filter__caption">Цена</button>
 											<div class="item-filter__body">
 												<div class="options__item">
-													<input hidden id="filter-price-1" class="options__input" checked type="radio" value="0 — 69" name="filter-price">
+													<input hidden id="filter-price-1" class="options__input" type="radio" value="0 — 69" name="filter-price">
 													<label for="filter-price-1" class="options__label"><span class="options__text">0 — 69</span></label>
 												</div>
 												<div class="options__item">
@@ -407,7 +406,7 @@
 						<div class="footer__right-wrapper">
 							<div class="footer__language language" data-spollers>
 								<div class="language__item">
-									<a href="" class="language__link _icon-language" data-spoller>
+									<a href="" class="language__link _icon-language" data-spoller data-spoller-close>
 										<span>Русский</span>
 									</a>
 									<ul class="language__sub-menu">
@@ -456,7 +455,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220405163243"></script>
+	<script src="js/app.min.js?_v=20220407131524"></script>
 </body>
 
 </html>

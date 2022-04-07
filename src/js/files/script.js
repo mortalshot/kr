@@ -9,6 +9,7 @@ const navOffset = headerWrapper.offsetTop;
 const wrapper = document.querySelector('.wrapper');
 const mainPage = document.querySelector('main.page');
 
+// Фиксирование шапки к верху страницы
 window.addEventListener('scroll', function () {
     const scrollTop = window.scrollY;
 
@@ -21,7 +22,6 @@ window.addEventListener('scroll', function () {
         mainPage.style.paddingTop = 0;
     }
 })
-
 
 const sidebar = document.querySelector('.catalog__sidebar');
 document.addEventListener("click", documentActions);
@@ -39,4 +39,21 @@ function documentActions(e) {
         sidebar.classList.remove('_active');
         bodyUnlock();
     }
+}
+
+const attributeItems = document.querySelectorAll('.cart-item__number');
+if (attributeItems.length > 0) {
+    document.addEventListener("selectCallback", function (e) {
+        // Селект
+        const currentSelect = e.detail.select;
+
+        if (currentSelect.getAttribute('name') === 'number') {
+            console.log(currentSelect.value);
+
+            if (currentSelect.value == "10+") {
+                currentSelect.closest('.cart-item__input').querySelector('.form__input').style.display = "block";
+                currentSelect.closest('.select').style.display = "none";
+            }
+        }
+    });
 }

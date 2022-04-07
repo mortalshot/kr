@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница продукта"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="product">
+                <div class="product__container">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs__wrapper" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                            <span class="breadcrumbs__link" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a href="home.html" itemprop="item">
+                                    <span itemprop="name">Главная</span>
+                                </a>
+                            </span>
+                            <span class="breadcrumbs__separator">\</span>
+                            <span class="breadcrumbs__link" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a href="archive-product.html" itemprop="item">
+                                    <span itemprop="name">Хиты</span>
+                                </a>
+                            </span>
+                            <span class="breadcrumbs__separator">\</span>
+                            <span class="breadcrumbs__title">Купальник слитный</span>
+                        </div>
+                    </div>
+
+                    <div class="product__main product-main" data-sticky="991.98, min" data-sticky-header>
+                        <div class="product-main__gallery gallery-product">
+                            <div class="gallery-product__slider swiper">
+                                <div class="gallery-product__wrapper swiper-wrapper" data-gallery="">
+                                    <a href="@img/products/product-1-1.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-1-1.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-1-2.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-1-2.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-1-3.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-1-3.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-1-4.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-1-4.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-1-5.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-1-5.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-1-6.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-1-6.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-2-1.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-2-1.jpg" alt="" loading="lazy">
+                                    </a>
+                                    <a href="@img/products/product-3-1.jpg" class="swiper-slide gallery-product__slide">
+                                        <img src="@img/products/product-3-1.jpg" alt="" loading="lazy">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="gallery-product__thumbs swiper">
+                                <div class="gallery-product__wrapper swiper-wrapper">
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-1-1.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-1-2.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-1-3.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-1-4.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-1-5.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-1-6.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-2-1.jpg" alt="" loading="lazy">
+                                    </div>
+                                    <div class="swiper-slide gallery-product__thumb">
+                                        <img src="@img/products/product-3-1.jpg" alt="" loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-main__body">
+                            <div class="product-main__wrapper" data-sticky-item>
+                                <div class="product-main__heading" data-da=".product-main, 767.98, first">
+                                    <h1 class="product-main__title">Купальник слитный</h1>
+
+                                    <div class="product-main__price price">
+                                        <span class="price__new">8 990 ₽</span>
+                                        <span class="price__old">14 990 ₽</span>
+                                    </div>
+                                </div>
+
+                                <div class="product-main__size product-size">
+                                    <div class="product-size__heading">
+                                        <div class="product-main__caption">Выберите размер</div>
+                                        <button data-popup="#size-table" class="product-size__btn btn btn_border-white" type="button">Таблица размеров</button>
+                                    </div>
+                                    <div class="product-size__select">
+                                        <select name="" class="select">
+                                            <option value="XS" selected>XS</option>
+                                            <option value="S">S</option>
+                                            <option value="M">M</option>
+                                            <option value="L" disabled>L</option>
+                                            <option value="XL">XL</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="product-main__color product-color">
+                                    <div class="product-main__caption">Выберите цвет</div>
+                                    <div class="product-color__slider-outer">
+                                        <div class="swiper__button swiper__button-prev _icon-select"></div>
+                                        <div class="product-color__slider swiper">
+                                            <div class="product-color__wrapper swiper-wrapper">
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Черный">
+                                                    <img data-src="@img/products/product-1-2.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Белый">
+                                                    <img data-src="@img/products/product-1-3.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Синий">
+                                                    <img data-src="@img/products/product-1-4.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Красный">
+                                                    <img data-src="@img/products/product-1-5.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Оранжевый">
+                                                    <img data-src="@img/products/product-2-1.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Жёлтый">
+                                                    <img data-src="@img/products/product-1-2.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Розовый">
+                                                    <img data-src="@img/products/product-1-3.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Голубой">
+                                                    <img data-src="@img/products/product-1-4.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                                <a href="" class="product-color__slide swiper-slide" data-tippy-content="Зелёный">
+                                                    <img data-src="@img/products/product-1-5.jpg" alt="" class="swiper-lazy" loading="lazy">
+                                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="swiper__button swiper__button-next _icon-select"></div>
+                                    </div>
+                                </div>
+
+                                <div class="product-main__actions">
+                                    <button type="button" class="product-main__submit btn btn_black">Добавить в корзину</button>
+                                    <button type="button" class="product-main__favorite btn btn_border-white">В избранное</button>
+                                </div>
+
+                                <div class="product-main__delivery product-delivery">
+                                    <div class="product-delivery__dates">18 мая — 22 мая</div>
+                                    <div class="product-delivery__descr">Примерная дата доставки в <span>России</span></div>
+                                    <div class="product-delivery__logo"><img src="@img/icons/dhl.svg" alt="" loading="lazy"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__description product-body">
+                        <div data-tabs class="product-body__tabs tabs">
+                            <nav data-tabs-titles class="tabs__navigation">
+                                <button type="submit" class="tabs__title ">описание</button>
+                                <button type="submit" class="tabs__title _tab-active">размер и крой</button>
+                                <button type="submit" class="tabs__title">Доставка и возврат</button>
+                            </nav>
+                            <div data-tabs-body class="tabs__content">
+                                <div class="tabs__body">
+                                    <div class="product-body__row">
+                                        <div class="product-body__wrapper">
+                                            <div class="product-body__text _content">
+                                                <p>Таким образом укрепление и развитие структуры требуют от нас анализа дальнейших направлений развития. Разнообразный и богатый опыт новая модель организационной деятельности.</p>
+                                            </div>
+                                            <div class="product-body__tags">
+                                                <div class="product-body__tag">
+                                                    <div class="product-body__caption">Состав</div>
+                                                    <div class="product-body__text _content">
+                                                        <p>Хлопок 100%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="product-body__tag">
+                                                    <div class="product-body__caption">Артикул</div>
+                                                    <div class="product-body__text _content">
+                                                        <p>XN1DH706LCGX</p>
+                                                    </div>
+                                                </div>
+                                                <div class="product-body__tag">
+                                                    <div class="product-body__caption">Модель</div>
+                                                    <div class="product-body__text _content">
+                                                        <p>Рост модели: 1,81 м. Размер на модели: OS</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-body__image"><img src="@img/products/product-1-1.jpg" alt="" loading="lazy"></div>
+                                    </div>
+                                </div>
+                                <div class="tabs__body">
+                                    <div class="product-body__row">
+                                        <div class="product-body__text _content">
+                                            <div class="table">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Объем груди</th>
+                                                            <th>Объем бёдер</th>
+                                                            <th>Объем талии</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>XS</td>
+                                                            <td>104</td>
+                                                            <td>106-108</td>
+                                                            <td>82</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>S</td>
+                                                            <td>80-90</td>
+                                                            <td>80-90</td>
+                                                            <td>до 66</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>M</td>
+                                                            <td>91-95</td>
+                                                            <td>91-96</td>
+                                                            <td>до 70</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>L</td>
+                                                            <td>96-100</td>
+                                                            <td>97-104</td>
+                                                            <td>до 76</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>XL</td>
+                                                            <td>102</td>
+                                                            <td>106</td>
+                                                            <td>78</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p>Разнообразный и богатый опыт консультация с широким активом позволяет выполнять важные задания по разработке существенных финансовых и административных условий. </p>
+                                        </div>
+                                        <div class="product-body__image"><img src="@img/products/product-3-1.jpg" alt="" loading="lazy"></div>
+                                    </div>
+                                </div>
+                                <div class="tabs__body">
+                                    <div class="product-body__row">
+                                        <div class="product-body__wrapper">
+                                            <div class="product-body__text _content">
+                                                <div class="product-body__caption">Доставка и возврат</div>
+                                                <p>Разнообразный и богатый опыт консультация с широким активом позволяет выполнять важные задания по разработке существенных финансовых и административных условий. </p>
+                                            </div>
+                                            <div class="product-body__text _content">
+                                                <div class="product-body__caption">Налоги и пошлины</div>
+                                                <p>Кадров требуют от нас анализа дальнейших направлений развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет оценить значение направлений прогрессивного развития. Равным образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации дальнейших направлений развития.</p>
+                                                <p>Не следует, однако забывать, что укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития. Равным образом рамки и место обучения кадров требуют определения и уточнения соответствующий условий активизации. Задача организации, в особенности же рамки и место обучения кадров влечет за собой процесс внедрения и модернизации модели развития.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="showcase">
+                <div class="showcase__container">
+                    <div class="showcase__slider swiper">
+                        <div class="showcase__heading">
+                            <h2 class="showcase__title">Рекомендации</h2>
+
+                            <div class="swiper__arrows">
+                                <div class="swiper__button swiper__button-prev _icon-arrow-left"></div>
+                                <div class="swiper__button swiper__button-next _icon-arrow-right"></div>
+                            </div>
+                        </div>
+                        <div class="showcase__wrapper swiper-wrapper">
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-1-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-2-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span>8 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-3-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-4-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span>22 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-5-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-1-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-2-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span>8 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-3-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-4-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span>22 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="showcase__slide swiper-slide">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img data-src="@img/products/product-5-1.jpg" class="swiper-lazy" alt="" loading="lazy">
+                                            <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{ })
+</body>
+
+</html>

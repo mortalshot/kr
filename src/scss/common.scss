@@ -19,10 +19,11 @@ video {
     height: auto;
 }
 
-._content {
-    @include adaptiveValue("font-size", 18, 14);
-    line-height: math.div(24, 16);
+._green {
+    color: green;
+}
 
+._content {
     h1,
     h2,
     h3,
@@ -33,7 +34,6 @@ video {
     }
 
     p {
-        line-height: math.div(25, 18);
         margin: rem(16) 0;
     }
 
@@ -92,21 +92,10 @@ video {
     a {
     }
 
-    .wp-block-table {
+    .table {
+        width: 100%;
         overflow-x: auto;
         scrollbar-width: thin;
-
-        &::-webkit-scrollbar {
-            height: rem(5);
-        }
-        &::-webkit-scrollbar-track {
-            background-color: $scrollThumb;
-            border-radius: rem(5);
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: rem(5);
-            background-color: $scrollTrack;
-        }
 
         table {
             width: 100%;
@@ -114,48 +103,36 @@ video {
 
             th,
             td {
-                min-width: rem(120);
-                color: #171a22;
+                @include adaptiveValue("min-width", 145, 98, 1440, 768, 1);
                 vertical-align: baseline;
 
-                &:not(:last-child) {
-                    padding-right: rem(8);
-                }
                 &:not(:first-child) {
-                    padding-left: rem(8);
+                    @include adaptiveValue("padding-left", 55, 8, 1440, 768, 1);
+                    text-align: center;
+                }
+                &:first-child {
+                    min-width: rem(90);
                 }
             }
 
             th {
                 padding-bottom: rem(16);
-                border-bottom: 1px solid $Grey;
-                font-weight: 500;
-                @include adaptiveValue("font-size", 20, 14);
-                line-height: math.div(28, 20);
+                border-bottom: 1px solid $Line;
+                font-weight: 400;
+                @include adaptiveValue("font-size", 14, 12);
+                line-height: math.div(22, 14);
                 text-align: left;
+                color: $Grey;
             }
 
             td {
                 padding-top: rem(16);
                 padding-bottom: rem(16);
-                @include adaptiveValue("font-size", 18, 14);
+                @include adaptiveValue("font-size", 16, 14);
                 line-height: math.div(24, 18);
-            }
-
-            tr {
-                &:last-child {
-                    td {
-                        padding-bottom: 0;
-                    }
-                }
+                border-bottom: 1px solid $Line;
             }
         }
-    }
-
-    .wp-block-separator {
-        border-bottom: 1px solid #b9bdc6;
-        @include adaptiveValue("margin-top", 48, 32);
-        @include adaptiveValue("margin-bottom", 48, 32);
     }
 
     :first-child {
@@ -173,6 +150,7 @@ video {
     &__old {
         font-weight: 500;
         text-decoration: line-through;
+        color: $Red;
     }
 
     // .price__new

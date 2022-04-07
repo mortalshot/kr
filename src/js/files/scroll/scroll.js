@@ -155,7 +155,7 @@ export function stickyBlock() {
 						stickyItemValues.position = `absolute`;
 						stickyItemValues.bottom = `${stickyConfig.bottom}px`;
 						stickyItemValues.top = `auto`;
-						stickyItemValues.left = `0px`;
+						stickyItemValues.left = `auto`;
 						stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 					}
 				}
