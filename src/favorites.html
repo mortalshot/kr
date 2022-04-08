@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Избранное"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="catalog favorites">
+                <div class="catalog__container">
+                    <div class="catalog__row">
+                        <div class="catalog__left  catalog__breadcrumbs breadcrumbs">
+                            <div class="breadcrumbs__wrapper" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                                <span class="breadcrumbs__link" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="home.html" itemprop="item">
+                                        <span itemprop="name">Главная</span>
+                                    </a>
+                                </span>
+                                <span class="breadcrumbs__separator">\</span>
+                                <span class="breadcrumbs__title">Избранное</span>
+                            </div>
+                        </div>
+                        <div class="catalog__right">
+                            <h1 class="favorites__title"> Избранное </h1>
+                        </div>
+                    </div>
+                    <div class="catalog__row" data-sticky="767.98, min" data-sticky-header>
+                        <div class="catalog__left favorites__filter">
+                            <form action="" class="catalog__filter filter" data-sticky-item>
+                                <div class="filter__wrapper">
+                                    <div class="filter__caption">Фильтр</div>
+
+                                    <ul class="filter__list">
+                                        <li class="filter__list-item _active"><a href="">Всё время</a></li>
+                                        <li class="filter__list-item"><a href="">2022 год</a></li>
+                                        <li class="filter__list-item"><a href="">2021 год</a></li>
+                                        <li class="filter__list-item"><a href="">2020 год</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+
+                            <button type="button" class="filter__close _icon-spoller"></button>
+                        </div>
+
+                        <div class="catalog__right">
+                            <div class="catalog__list">
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-1-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-2-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Собрал текстов реторический за большой?</div>
+                                            <div class="product-card__price price"> 101 990 ₽</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-3-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-4-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник цельный, чёрный</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">8 990 ₽</span>
+                                                <span class="price__old">14 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-5-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Далеко-далеко</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-6-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="single-product.html" class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__thumb">
+                                            <img src="@img/products/product-7-1.jpg" alt="" loading="lazy">
+                                        </div>
+                                        <div class="product-card__body">
+                                            <div class="product-card__name">Купальник</div>
+                                            <div class="product-card__price price">
+                                                <span class="price__new">23 990 ₽</span>
+                                                <span class="price__old">25 990 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a href="" class="catalog__btn btn btn_border-white">Показать ещё</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

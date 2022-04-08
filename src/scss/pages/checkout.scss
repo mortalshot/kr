@@ -594,3 +594,38 @@
         }
     }
 }
+
+// .favorites ====================================================================================================
+.favorites {
+    // .favorites__title
+    &__title {
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    // .favorites__filter
+    &__filter {
+        @media (max-width: $mobile) {
+            margin-bottom: rem(24);
+        }
+    }
+
+    .catalog {
+        // .catalog__container
+        &__container {
+            @media (max-width: $mobile) {
+                row-gap: rem(32);
+            }
+        }
+
+        // .catalog__container
+        &__container {
+        }
+    }
+
+    .filter__caption {
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}

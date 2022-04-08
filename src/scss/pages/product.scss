@@ -282,8 +282,7 @@
 
     // .filter__wrapper
     &__wrapper {
-        top: rem(200px);
-        position: sticky;
+        display: grid;
     }
 
     // .filter__caption
@@ -306,6 +305,65 @@
 
     // .filter__item
     &__item {
+    }
+
+    // .filter__list
+    &__list {
+        display: grid;
+        align-content: flex-start;
+        row-gap: rem(24);
+
+        @media (max-width: $mobile) {
+            display: flex;
+            column-gap: rem(24);
+            border-bottom: 1px solid $Grey;
+            overflow-y: hidden;
+            overflow-x: auto;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+        }
+    }
+
+    // .filter__list-item
+    &__list-item {
+        @media (max-width: $mobile) {
+            padding-bottom: rem(18);
+        }
+
+        a {
+            font-weight: 600;
+            font-size: rem(12);
+            line-height: math.div(14, 12);
+            color: $Grey;
+            letter-spacing: em(1.2, 12);
+            text-transform: uppercase;
+
+            @media (max-width: $mobile) {
+                white-space: nowrap;
+            }
+
+            @media (any-hover: hover) {
+                transition: $transition ease opacity 0s;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        &._active {
+            a {
+                color: $mainColor;
+            }
+
+            @media (max-width: $mobile) {
+                border-bottom: 2px solid $mainColor;
+            }
+        }
     }
 }
 
