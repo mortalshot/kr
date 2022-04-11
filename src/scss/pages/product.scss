@@ -248,22 +248,66 @@
 .product-card {
     // .product-card__wrapper
     &__wrapper {
+        display: grid;
+        row-gap: rem(16);
     }
 
     // .product-card__thumb
     &__thumb {
+        position: relative;
+        padding-bottom: percent(400, 280);
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     // .product-card__body
     &__body {
+        display: grid;
+        row-gap: rem(4);
+        @include adaptiveValue("font-size", 14, 12);
+        line-height: math.div(20, 14);
     }
 
     // .product-card__name
     &__name {
+        color: rgba($color: $Blue, $alpha: 0.5);
     }
 
     // .product-card__price
     &__price {
+        .price__old {
+            @include adaptiveValue("font-size", 12, 10);
+        }
+    }
+}
+a.product-card {
+    @media (any-hover: hover) {
+        .product-card__thumb {
+            overflow: hidden;
+
+            img {
+                transform: scale(1) translateY(0);
+                transform-origin: 50% 84%;
+                transition: 5s ease all 0s;
+            }
+        }
+
+        &:hover {
+            .product-card__thumb {
+                img {
+                    transform: scale(1.25) translateY(15px);
+                    transform-origin: bottom;
+                    opacity: 0.6;
+                    transition: 5s ease all 0s;
+                }
+            }
+        }
     }
 }
 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Личный кабинет"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="my-account">
+                <div class="my-account__container">
+                    <h1 class="my-account__title">Личный кабинет</h1>
+
+                    <div class="my-account__row">
+                        <div class="my-account__info">
+                            <div class="my-account__caption">Личная информация</div>
+                            <div class="my-account__items">
+                                <div class="my-account__item"><span>Портнягина Наталья Викторовна</span></div>
+                                <div class="my-account__item"><span>+7 988 284 21 41</span></div>
+                                <div class="my-account__item"><span>mailname@mail.ru</span></div>
+                            </div>
+                            <a href="edit-info.html" class="my-account__btn btn btn_border-white">Изменить</a>
+                        </div>
+                        <div class="my-account__discount account-discount">
+                            <div class="account-discount__level _silver">
+                                <span class="account-discount__percent">5%</span>
+                                <span class="account-discount__rank">Silver</span>
+                            </div>
+                            <div class="account-discount__text _content">
+                                <p>Ваша персональная скидка зависит от количества покупок. Следующий уровень вы получите при общей сумме покупок <b>10 000 ₽</b></p>
+                            </div>
+
+                            <div class="account-discount__range progress">
+                                <div class="progress__bg">
+                                    <div class="progress__line" style="width: 68.9%;"></div>
+                                </div>
+
+                                <div class="progress__title"><span>6 890</span> ₽ из <span>10 000</span> ₽</div>
+                            </div>
+                        </div>
+                        <div class="my-account__address">
+                            <div class="my-account__caption">Адреса доставки</div>
+                            <div class="my-account__items">
+                                <div class="my-account__item">
+                                    <img src="@img/icomoon/location.svg" alt="" loading="lazy">
+                                    <span>Россия, г. Санкт-Петербург ул. Шаумяна 28/4 </span>
+                                </div>
+                            </div>
+                            <a href="edit-address.html" class="my-account__btn btn btn_border-white">Редактировать адреса</a>
+                        </div>
+                        <div class="my-account__password">
+                            <div class="my-account__caption">Безопасность</div>
+                            <a href="edit-password.html" class="my-account__btn btn btn_border-white">Изменить пароль</a>
+                        </div>
+                        <div class="my-account__mailing account-mailing">
+                            <div class="account-mailing__body">
+                                <div class="my-account__caption">Получать SMS-рассылку</div>
+                                <div class="account-mailing__text _content">
+                                    <p>Не пропустите выгодные акции и новинки </p>
+                                </div>
+                            </div>
+                            <label class="account-mailing__switch switch">
+                                <input type="checkbox" class="switch__input">
+                                <span class="switch__slider"></span>
+                            </label>
+                        </div>
+                        <div class="my-account__history order-history">
+                            <div class="my-account__caption">История заказов</div>
+
+                            <div class="order-history__list">
+                                <div class="order-history__item order-brief">
+                                    <div class="order-brief__caption">
+                                        <a href="order-details.html">Заказ 982674</a> от 07.08.2021
+                                    </div>
+                                    <div class="order-brief__status">Заказ доставлен</div>
+                                    <div class="order-brief__total">4 498 ₽</div>
+                                </div>
+                                <div class="order-history__item order-brief">
+                                    <div class="order-brief__caption">
+                                        <a href="order-details.html">Заказ 982674</a> от 07.08.2021
+                                    </div>
+                                    <div class="order-brief__status">Оплачен. Заказ доставлен</div>
+                                    <div class="order-brief__total">1 144 498 ₽</div>
+                                </div>
+                                <div class="order-history__item order-brief">
+                                    <div class="order-brief__caption">
+                                        <a href="order-details.html">Заказ 982674</a> от 07.08.2021
+                                    </div>
+                                    <div class="order-brief__status">Заказ доставлен</div>
+                                    <div class="order-brief__total">4 498 ₽</div>
+                                </div>
+                                <div class="order-history__item order-brief">
+                                    <div class="order-brief__caption">
+                                        <a href="order-details.html">Заказ 982674</a> от 07.08.2021
+                                    </div>
+                                    <div class="order-brief__status">Оплачен. Заказ доставлен</div>
+                                    <div class="order-brief__total">1 144 498 ₽</div>
+                                </div>
+                                <div class="order-history__item order-brief">
+                                    <div class="order-brief__caption">
+                                        <a href="order-details.html">Заказ 982674</a> от 07.08.2021
+                                    </div>
+                                    <div class="order-brief__status">Заказ доставлен</div>
+                                    <div class="order-brief__total">4 498 ₽</div>
+                                </div>
+                                <div class="order-history__item order-brief">
+                                    <div class="order-brief__caption">
+                                        <a href="order-details.html">Заказ 982674</a> от 07.08.2021
+                                    </div>
+                                    <div class="order-brief__status">Оплачен. Заказ доставлен</div>
+                                    <div class="order-brief__total">1 144 498 ₽</div>
+                                </div>
+                            </div>
+
+                            <div class="order-history__pagination pagination">
+                                <ul class="pagination__pages">
+                                    <li class="pagination__item pagination__item_active">1</li>
+                                    <li class="pagination__item"><a href="">2</a></li>
+                                    <li class="pagination__item"><a href="">3</a></li>
+                                    <li class="pagination__item pagination__item_points">...</li>
+                                    <li class="pagination__item"><a href="">48</a></li>
+                                </ul>
+                                <div class="pagination__arrows">
+                                    <div class="pagination__arrow"><a href="" class="_icon-arrow-left"></a></div>
+                                    <div class="pagination__arrow"><a href="" class="_icon-arrow-right"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -22,6 +22,9 @@ video {
 ._green {
     color: green;
 }
+._silver {
+    color: $Blue;
+}
 
 ._content {
     h1,
@@ -201,6 +204,127 @@ section {
     }
 }
 
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // .pagination__pages
+    &__pages {
+        display: flex;
+        align-items: center;
+    }
+
+    // .pagination__item
+    &__item {
+        @include adaptiveValue("width", 44, 40);
+        @include adaptiveValue("height", 44, 40);
+        @include adaptiveValue("flex-basis", 44, 40);
+        border-radius: rem(4);
+        background-color: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 14, 13);
+        line-height: math.div(16, 13);
+        color: $Grey;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            @media (any-hover: hover) {
+                transition: $transition ease color 0s;
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+
+        // .pagination__item_active
+        &_active {
+            background-color: $mainColor;
+            color: $White;
+        }
+
+        // .pagination__item_points
+        &_points {
+        }
+    }
+
+    // .pagination__arrows
+    &__arrows {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("column-gap", 16, 0);
+    }
+
+    // .pagination__arrow
+    &__arrow {
+        @include adaptiveValue("width", 44, 40);
+        @include adaptiveValue("height", 44, 40);
+        @include adaptiveValue("flex-basis", 44, 40);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: rem(20);
+        color: $Grey;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            @media (any-hover: hover) {
+                transition: $transition ease color 0s;
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+.progress {
+    // .progress__bg
+    &__bg {
+        height: rem(2);
+        width: 100%;
+        background-color: $Line;
+        position: relative;
+    }
+
+    // .progress__line
+    &__line {
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $Blue;
+    }
+
+    // .progress__title
+    &__title {
+        font-size: rem(12);
+        line-height: math.div(16, 12);
+        text-align: center;
+        color: $DGey;
+
+        &:not(:first-child) {
+            @include adaptiveValue("margin-top", 16, 12);
+        }
+    }
+}
+
 // Анимации
 @keyframes shake-bottom {
     0%,
@@ -261,5 +385,376 @@ section {
     }
     // .swiper__button-next
     &__button-next {
+    }
+}
+
+// templates
+// .template1 ====================================================================================================
+.template1 {
+    // .template1__container
+    &__container {
+        @media (max-width: $mobile) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    // .template1__wrapper
+    &__wrapper {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include adaptiveValue("padding-top", 70, 40);
+        @include adaptiveValue("padding-bottom", 70, 40);
+        @include adaptiveValue("padding-left", 100, 15);
+        @include adaptiveValue("padding-right", 100, 15);
+        color: $White;
+        @include adaptiveValue("min-height", 573, 470);
+        display: grid;
+        align-items: center;
+        row-gap: rem(40);
+
+        @media (min-width: $mobile) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "text button";
+            align-content: space-between;
+            justify-content: space-between;
+        }
+    }
+
+    // .template1__title
+    &__title {
+        @media (min-width: $mobile) {
+            grid-area: title;
+        }
+    }
+
+    // .template1__text
+    &__text {
+        @media (min-width: $mobile) {
+            grid-area: text;
+        }
+
+        p {
+            margin: rem(20) 0;
+
+            &:first-child {
+                @extend %firstletter;
+            }
+        }
+    }
+
+    // .template1__btn
+    &__btn {
+        @media (min-width: $mobile) {
+            grid-area: button;
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+
+        .btn {
+            min-width: rem(180);
+        }
+    }
+}
+
+// .template2 ====================================================================================================
+.template2 {
+    // .template2__container
+    &__container {
+    }
+
+    // .template2__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(32);
+        }
+    }
+
+    // .template2__row
+    &__row {
+        display: grid;
+        @include adaptiveValue("row-gap", 64, 24, 1280, 992, 1);
+
+        @media (min-width: $mobile) {
+            grid-template-columns: percent(581, 1180) 1fr;
+            @include adaptiveValue("column-gap", 120, 24, 1280, 992, 1);
+        }
+    }
+
+    // .template2__column
+    &__column {
+        display: grid;
+        align-content: flex-end;
+        @include adaptiveValue("row-gap", 64, 24, 1280, 992, 1);
+    }
+
+    // .template2__left
+    &__left {
+        .template2__image {
+            padding-bottom: percent(341, 581);
+
+            @media (max-width: $mobile) {
+                grid-row: 1/2;
+            }
+        }
+    }
+
+    // .template2__text
+    &__text {
+        @media (min-width: $mobile) {
+            padding-top: rem(40);
+            max-width: rem(381);
+            margin-left: auto;
+        }
+    }
+
+    // .template2__image
+    &__image {
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    // .template2__right
+    &__right {
+        .template2__image {
+            padding-bottom: percent(507, 480);
+
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+    }
+
+    // .template2__btn
+    &__btn {
+    }
+}
+
+// .single-content ====================================================================================================
+.single-content {
+    // .single-content__container
+    &__container {
+    }
+
+    // .single-content__banner
+    &__banner {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: grid;
+        justify-items: flex-end;
+        @include adaptiveValue("min-height", 551, 400);
+        @include adaptiveValue("padding-top", 40, 20);
+        @include adaptiveValue("padding-bottom", 40, 20);
+        @include adaptiveValue("padding-left", 60, 10);
+        @include adaptiveValue("padding-right", 60, 10);
+        color: $White;
+
+        @media (min-width: $mobile) {
+            align-content: flex-end;
+            margin-top: rem(-20);
+        }
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 100, 36);
+        }
+
+        .single-content__title {
+            @include adaptiveValue("font-size", 110, 30);
+            line-height: 1.1;
+        }
+    }
+
+    // .single-content__title
+    &__title {
+        text-transform: uppercase;
+    }
+
+    // .single-content__text
+    &__text {
+        max-width: rem(680);
+        margin-left: auto;
+        margin-right: auto;
+
+        p {
+            @include adaptiveValue("margin-top", 64, 16);
+            @include adaptiveValue("margin-bottom", 64, 16);
+        }
+    }
+}
+
+// .faq ====================================================================================================
+.faq {
+    &:first-child {
+        @include adaptiveValue("padding-top", 56, 24);
+    }
+
+    // .faq__container
+    &__container {
+        max-width: rem(880);
+    }
+
+    // .faq__title
+    &__title {
+        @media (min-width: $mobileM) {
+            text-align: center;
+        }
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 56, 24);
+        }
+    }
+
+    // .faq__spollers
+    &__spollers {
+        display: grid;
+        row-gap: rem(16);
+
+        .spollers {
+            // .spollers__item
+            &__item {
+                border: 1px solid $Line;
+                border-radius: rem(4);
+                transition: $transition ease border-color 0s;
+                @include adaptiveValue("padding", 40, 20);
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        border-color: $Grey;
+                    }
+                }
+            }
+
+            // .spollers__title
+            &__title {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                column-gap: rem(20);
+                width: 100%;
+                text-align: left;
+                font-weight: 700;
+                @include adaptiveValue("font-size", 20, 18);
+                line-height: math.div(20, 18);
+
+                span {
+                    max-width: rem(640);
+                }
+
+                &::after {
+                    @extend %ic;
+                    content: "\e90e";
+                    font-size: rem(24);
+                    transition: $transition ease transform 0s;
+                }
+
+                &._spoller-active {
+                    &::after {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            // .spollers__body
+            &__body {
+                max-width: rem(640);
+                padding-top: rem(24);
+            }
+        }
+    }
+}
+
+// .template3 ====================================================================================================
+.template3 {
+    &:first-child {
+        @include adaptiveValue("padding-top", 56, 24);
+    }
+
+    // .template3__container
+    &__container {
+    }
+
+    // .template3__tabs
+    &__tabs {
+        @media (min-width: $mobile) {
+            display: grid;
+            align-content: flex-start;
+            grid-template-columns: percent(280, 1180) 1fr;
+            column-gap: rem(20);
+        }
+
+        .tabs {
+            // .tabs__navigation
+            &__navigation {
+                @media (min-width: $mobile) {
+                    display: grid;
+                    align-content: flex-start;
+                    row-gap: rem(24);
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                    @include adaptiveValue("padding-top", 86, 72, 1440, 768, 1);
+                }
+                @media (max-width: $mobile) {
+                    margin-bottom: rem(24);
+                }
+            }
+
+            // .tabs__title
+            &__title {
+                @media (min-width: $mobile) {
+                    font-weight: 400;
+                    @include adaptiveValue("font-size", 16, 14);
+                    line-height: math.div(18, 16);
+                    color: $Grey;
+                    text-align: left;
+                    text-transform: none;
+                    letter-spacing: 0;
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &._tab-active {
+                        color: $mainColor;
+                        text-decoration: underline $mainColor from-font;
+                        text-underline-offset: 3px;
+                    }
+                }
+                @media (max-width: $mobile) {
+                    padding-left: rem(24);
+                    padding-right: rem(24);
+                }
+            }
+
+            // .tabs__content
+            &__content {
+            }
+
+            // .tabs__body
+            &__body {
+                max-width: rem(680);
+
+                h2 {
+                    font-weight: 600;
+                    @include adaptiveValue("font-size", 32, 24);
+                    line-height: math.div(29, 24);
+
+                    &:not(:last-child) {
+                        @include adaptiveValue("margin-bottom", 40, 24);
+                    }
+                }
+            }
+        }
     }
 }

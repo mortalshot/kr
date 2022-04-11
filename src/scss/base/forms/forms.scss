@@ -18,7 +18,7 @@
 	// .form__label
 	&__label {
 	}
-	
+
 	// .form__input
 	&__input {
 	}
@@ -261,7 +261,6 @@
 	}
 }
 
-
 // <BUTTONS>
 // Снипет (HTML): btn
 @import "button";
@@ -281,6 +280,9 @@
 // <SELECT>
 // Снипет (HTML): sel
 @import "select";
+
+// <SWITCH>
+@import "switch";
 
 // <RATING>
 // Снипет (HTML): rating
