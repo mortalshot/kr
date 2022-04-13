@@ -97,6 +97,9 @@
 
     // .cart-item__wrapper
     &__wrapper {
+        &:not(:last-child) {
+            margin-bottom: rem(12);
+        }
     }
 
     // .cart-item__name
@@ -489,14 +492,7 @@
 
         // .form__label
         &__label {
-            display: inline-block;
             font-size: rem(14);
-            line-height: math.div(21, 14);
-            color: $Grey;
-            margin-bottom: rem(8);
-        }
-        label.form__label {
-            cursor: pointer;
         }
 
         // .form__input
@@ -547,37 +543,9 @@
                 @include adaptiveValue("margin-bottom", 32, 24);
             }
 
-            // .cart-item__img
-            &__img {
-            }
-
-            // .cart-item__body
-            &__body {
-            }
-
-            // .cart-item__wrapper
-            &__wrapper {
-            }
-
             // .cart-item__name
             &__name {
                 padding-right: 0;
-            }
-
-            // .cart-item__attribute
-            &__attribute {
-            }
-
-            // .cart-item__size
-            &__size {
-            }
-
-            // .cart-item__caption
-            &__caption {
-            }
-
-            // .cart-item__number
-            &__number {
             }
 
             // .cart-item__price

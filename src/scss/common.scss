@@ -363,9 +363,9 @@ section {
 
     // .swiper__button
     &__button {
-        @include adaptiveValue("font-size", 24, 18);
+        font-size: rem(16);
         color: $Grey;
-        @include adaptiveValue("padding", 10, 8);
+        @include adaptiveValue("padding", 14, 12);
 
         &:not(.swiper-button-disabled) {
             cursor: pointer;
@@ -435,6 +435,7 @@ section {
     &__text {
         @media (min-width: $mobile) {
             grid-area: text;
+            max-width: rem(352);
         }
 
         p {
@@ -505,9 +506,14 @@ section {
     // .template2__text
     &__text {
         @media (min-width: $mobile) {
-            padding-top: rem(40);
             max-width: rem(381);
             margin-left: auto;
+        }
+
+        p {
+            &:first-child {
+                @extend %firstletter;
+            }
         }
     }
 

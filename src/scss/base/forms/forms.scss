@@ -17,6 +17,14 @@
 
 	// .form__label
 	&__label {
+		display: inline-block;
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: math.div(21, 14);
+		color: $Grey;
+		margin-bottom: rem(8);
+	}
+	label.form__label {
+		cursor: pointer;
 	}
 
 	// .form__input

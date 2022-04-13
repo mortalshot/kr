@@ -46,6 +46,10 @@
 
 		@media (min-width: $mobileM) {
 			@include adaptiveValue("padding-bottom", 18, 8, 1280, 575, 1);
+
+			&:not(:last-child) {
+				padding-bottom: rem(6);
+			}
 		}
 		@media (max-width: $mobileM) {
 			@include adaptiveValue("padding-bottom", 18, 12);

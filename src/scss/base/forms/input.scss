@@ -27,6 +27,35 @@ textarea {
 			padding-right: rem(40);
 		}
 	}
+
+	&._password {
+		input {
+			padding-right: rem(50);
+		}
+
+		button {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			padding: rem(0) rem(16);
+			font-size: rem(18);
+
+			@media (any-hover: hover) {
+				transition: $transition ease opacity 0s;
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+
+			&._viewpass-active {
+				&::before {
+					content: "\e907";
+				}
+			}
+		}
+	}
 }
 
 .form__input {

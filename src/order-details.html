@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Страница заказа"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="order-details">
+                <div class="order-details__container">
+                    <div class="order-details__heading">
+                        <div class="order-details__info">
+                            <div class="order-details__number">Заказ 982674</div>
+                            <div class="order-details__status _icon-accept">Заказ оплачен и доставлен</div>
+                            <div class="order-details__date">Сделан 07.11.2021</div>
+                        </div>
+                        <div class="order-details__back"><a href="profile.html" class="btn btn_border-white">Вернуться в личный кабинет</a></div>
+                    </div>
+
+                    <div class="order-details__row">
+                        <div class="order-details__order">
+                            <div class="order-details__caption">Товары</div>
+                            <div class="order-details__list">
+                                <div class="order-details__item cart-item">
+                                    <div class="cart-item__img"><img src="img/products/product-2-1.jpg" alt="" loading="lazy"></div>
+                                    <div class="cart-item__body">
+                                        <div class="cart-item__wrapper">
+                                            <div class="cart-item__name">Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Дорогу скатился безопасную рукописи последний?</div>
+                                            <div class="cart-item__attribute cart-item__size">
+                                                <div class="cart-item__caption">Размер: 39</div>
+                                            </div>
+                                            <div class="cart-item__attribute cart-item__number">
+                                                <div class="cart-item__caption">Количество: 1</div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item__price price">14 990 ₽ </div>
+                                    </div>
+                                </div>
+                                <div class="order-details__item cart-item">
+                                    <div class="cart-item__img"><img src="img/products/product-2-1.jpg" alt="" loading="lazy"></div>
+                                    <div class="cart-item__body">
+                                        <div class="cart-item__wrapper">
+                                            <div class="cart-item__name">Купальник цельный, чёрный</div>
+                                            <div class="cart-item__attribute cart-item__size">
+                                                <div class="cart-item__caption">Размер: 39</div>
+                                            </div>
+                                            <div class="cart-item__attribute cart-item__number">
+                                                <div class="cart-item__caption">Количество: 1</div>
+                                            </div>
+                                        </div>
+                                        <div class="cart-item__price price">
+                                            <span class="price__new">8 990 ₽</span>
+                                            <span class="price__old">14 990 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-details__total total-cart">
+                            <div class="total-cart__wrapper">
+                                <div class="total-cart__body">
+                                    <div class="total-cart__list">
+                                        <div class="total-cart__item">
+                                            <span>Товары</span>
+                                            <span>18 928 ₽</span>
+                                        </div>
+                                        <div class="total-cart__item">
+                                            <span>Скидка</span>
+                                            <span class="_green">-500 ₽</span>
+                                        </div>
+                                    </div>
+                                    <div class="total-cart__resume">
+                                        <div class="total-cart__caption">Итого</div>
+                                        <div class="total-cart__resume-val">18 928 ₽</div>
+                                    </div>
+                                </div>
+
+                                <div class="total-cart__footer">
+                                    <a href="checkout.html" class="total-cart__btn btn btn_border-white"> Написать в поддержку</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-details__data">
+                            <div class="order-details__info order-info">
+                                <div class="order-info__icon"><img src="@img/icomoon/login.svg" alt="" loading="lazy"></div>
+                                <div class="order-info__body">
+                                    <div class="order-details__caption">Контактная информация</div>
+                                    <div class="order-info__items">
+                                        <div class="order-info__item">
+                                            <span>Портнягина Наталья Викторовна</span>
+                                        </div>
+                                        <div class="order-info__item">
+                                            <span>+7 988 2 **** 41</span>
+                                        </div>
+                                        <div class="order-info__item">
+                                            <span>mailname@mail.ru</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-details__info order-info">
+                                <div class="order-info__icon"><img src="@img/icomoon/delivery.svg" alt="" loading="lazy"></div>
+                                <div class="order-info__body">
+                                    <div class="order-details__caption">Информация о доставке</div>
+                                    <div class="order-info__items">
+                                        <div class="order-info__item">
+                                            <span>Доставка до дома</span>
+                                        </div>
+                                        <div class="order-info__item">
+                                            <img src="@img/icomoon/location.svg" alt="" loading="lazy">
+                                            <span>Россия, г. Санкт-Петербург ул. Малиновского, д. 27А</span>
+                                        </div>
+                                        <div class="order-info__item">
+                                            <img src="@img/icomoon/calendar.svg" alt="" loading="lazy">
+                                            <span>Доставлено <b>29.04.2021</b></span>
+                                        </div>
+                                    </div>
+                                    <div class="order-info__price">450 ₽</div>
+                                </div>
+                            </div>
+                            <div class="order-details__info order-info">
+                                <div class="order-info__icon"><img src="@img/icomoon/wallet.svg" alt="" loading="lazy"></div>
+                                <div class="order-info__body">
+                                    <div class="order-details__caption">Способ оплаты</div>
+                                    <div class="order-info__items">
+                                        <div class="order-info__item">
+                                            <span>Онлайн-оплата картой на сайте</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

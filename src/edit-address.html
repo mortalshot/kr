@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Редактирование адреса"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <section class="edit-info">
+                <div class="edit-info__container">
+                    <h1 class="edit-info__title">Адрес доставки</h1>
+
+                    <form action="" class="edit-info__form form">
+                        <div class="form__row">
+                            <div class="form__item col-12">
+                                <label for="edis-address" class="form__label">Адрес</label>
+                                <input id="edis-address" type="text" name="edis-address" placeholder="" class="form__input" value="">
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__actions col-12">
+                                <button type="submit" class="btn btn_black">Сохранить</button>
+                                <a href="profile.html" class="btn btn_border-white">Отменить</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
