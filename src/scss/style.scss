@@ -77,8 +77,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	opacity: 0;
-	transition: 0.3s ease opacity 0s;
+	/* opacity: 0;
+	transition: 0.3s ease opacity 0s; */
 
 	// Прижимаем footer
 	> main {
