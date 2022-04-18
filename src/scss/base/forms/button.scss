@@ -51,4 +51,18 @@
 			}
 		}
 	}
+
+	&_border-black {
+		background-color: transparent;
+		border-color: $mainColor;
+		color: $mainColor;
+
+		@media (any-hover: hover) {
+			transition: $transition ease background-color 0s;
+
+			&:hover {
+				background-color: $White;
+			}
+		}
+	}
 }

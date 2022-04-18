@@ -327,6 +327,7 @@ a.product-card {
     // .filter__wrapper
     &__wrapper {
         display: grid;
+        align-content: flex-start;
     }
 
     // .filter__caption
@@ -344,7 +345,14 @@ a.product-card {
     // .filter__items
     &__items {
         display: grid;
+        align-content: flex-start;
         row-gap: rem(20);
+        overflow-y: auto;
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            height: 0;
+            width: 0;
+        }
     }
 
     // .filter__item
@@ -629,6 +637,8 @@ a.product-card {
 
     // .product-main__delivery
     &__delivery {
+        display: grid;
+        @include adaptiveValue("row-gap", 24, 16);
     }
 }
 

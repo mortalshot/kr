@@ -341,6 +341,12 @@
 		@include adaptiveValue("column-gap", 48, 24, 1280, 992, 1);
 		row-gap: rem(8);
 
+		._sale {
+			a {
+				color: $Red;
+			}
+		}
+
 		a {
 			@media (any-hover: hover) {
 				transition: $transition ease color 0s;

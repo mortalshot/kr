@@ -53,8 +53,23 @@
         }
     }
 
+    //.cart__right
+    &__right {
+    }
+
+    //.cart__wrapper
+    &__wrapper {
+        display: grid;
+        align-content: flex-start;
+        @include adaptiveValue("row-gap", 32, 24);
+    }
+
     // .cart__totals
     &__totals {
+    }
+
+    // .cart__coupon
+    &__coupon {
     }
 }
 
@@ -364,6 +379,65 @@
         &:not(:first-child) {
             margin-top: rem(12);
         }
+    }
+}
+
+.coupon {
+    // .coupon__wrapper
+    &__wrapper {
+        background-color: #eff0f2;
+        padding: rem(16) rem(24);
+        @include adaptiveValue("padding-left", 24, 16, 1440, 992, 1);
+        @include adaptiveValue("padding-right", 24, 16, 1440, 992, 1);
+        border-radius: rem(4);
+        display: grid;
+        row-gap: rem(8);
+        font-size: rem(14);
+        line-height: math.div(21, 14);
+    }
+
+    // .coupon__label
+    &__label {
+        display: inline-block;
+        color: #000;
+    }
+    label.coupon__label {
+        cursor: pointer;
+    }
+
+    // .coupon__row
+    &__row {
+        display: grid;
+        row-gap: rem(8);
+        column-gap: rem(8);
+
+        @media (min-width: $tablet) {
+            display: flex;
+        }
+        @media (max-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    // .coupon__input
+    &__input {
+        background-color: $White;
+        min-height: rem(48);
+    }
+
+    // .coupon__btn
+    &__btn {
+        font-size: rem(14);
+        line-height: math.div(21, 14);
+        min-height: rem(48);
+        padding: rem(10) rem(15);
+        @include adaptiveValue("padding-left", 24, 15, 1440, 992, 1);
+        @include adaptiveValue("padding-right", 24, 15, 1440, 992, 1);
+    }
+
+    // .coupon__notify
+    &__notify {
+        font-size: rem(12);
     }
 }
 

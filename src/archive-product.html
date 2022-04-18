@@ -31,10 +31,8 @@
                             <form class="catalog__sorting" method="get">
                                 <!-- Если нужна ссылка, то атрибуту option добавляем data-href -->
                                 <select name="orderby" class="select">
-                                    <option value="menu_order">Исходная сортировка</option>
+                                    <option value="menu_order">По умолчанию</option>
                                     <option value="popularity">По популярности</option>
-                                    <option value="rating">По рейтингу</option>
-                                    <option value="date">Сортировка от последнего</option>
                                     <option value="price">Цены: по возрастанию</option>
                                     <option value="price-desc">Цены: по убыванию</option>
                                 </select>
@@ -43,9 +41,9 @@
                             <button class="catalog__filter-btn btn btn_border-black _icon-filter">Фильтры</button>
                         </div>
                     </div>
-                    <div class="catalog__row">
+                    <div class="catalog__row" data-sticky="767.98, min" data-sticky-header>
                         <div class="catalog__left catalog__sidebar">
-                            <form action="" class="catalog__filter filter">
+                            <form action="" class="catalog__filter filter" data-sticky-item>
                                 <div class="filter__wrapper">
                                     <div class="filter__caption">Фильтр</div>
 
