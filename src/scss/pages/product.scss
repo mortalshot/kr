@@ -367,7 +367,6 @@ a.product-card {
 
         @media (max-width: $mobile) {
             display: flex;
-            column-gap: rem(24);
             border-bottom: 1px solid $Grey;
             overflow-y: hidden;
             overflow-x: auto;
@@ -376,6 +375,12 @@ a.product-card {
             &::-webkit-scrollbar {
                 width: 0;
                 height: 0;
+            }
+
+            & > * {
+                &:not(:last-child) {
+                    margin-right: rem(24);
+                }
             }
         }
     }

@@ -409,7 +409,6 @@
     &__row {
         display: grid;
         row-gap: rem(8);
-        column-gap: rem(8);
 
         @media (min-width: $tablet) {
             display: flex;
@@ -421,8 +420,16 @@
 
     // .coupon__input
     &__input {
+        display: block;
         background-color: $White;
         min-height: rem(48);
+
+        @media (min-width: $tablet) {
+            margin-right: rem(8);
+        }
+        @media (max-width: $mobile) {
+            margin-right: rem(8);
+        }
     }
 
     // .coupon__btn

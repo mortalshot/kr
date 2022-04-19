@@ -2,7 +2,6 @@
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
-		@include adaptiveValue("column-gap", 76, 24);
 		overflow-x: auto;
 		overflow-y: hidden;
 		width: 100%;
@@ -25,6 +24,10 @@
 		color: $Grey;
 		position: relative;
 		white-space: nowrap;
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 76, 24);
+		}
 
 		&::after {
 			content: "";

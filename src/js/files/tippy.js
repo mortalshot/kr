@@ -12,16 +12,5 @@ import "../../scss/libs/tippy.scss";
 //import 'tippy.js/dist/tippy.css';
 
 // Запускаем и добавляем в объект модулей
-/* let tippyMmd2 = window.matchMedia('(min-width: 991.98px)');
-function tippyHandleMmd2Change(e) {
-    if (e.matches) {
-        // Запускаем и добавляем в объект модулей
-        flsModules.tippy = tippy('[data-tippy-content]', {
-        });
-    }
-}
-tippyMmd2.addEventListener('change', tippyHandleMmd2Change);
-tippyHandleMmd2Change(tippyMmd2); */
-
 flsModules.tippy = tippy('[data-tippy-content]', {
 });

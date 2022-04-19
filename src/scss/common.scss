@@ -457,6 +457,10 @@ section {
 
         .btn {
             min-width: rem(180);
+
+            @media (max-width:$mobile){
+                 width: 100%; 
+            }
         }
     }
 }

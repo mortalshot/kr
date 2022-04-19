@@ -149,7 +149,6 @@
 			.header-controls__link {
 				display: flex;
 				align-items: center;
-				column-gap: rem(12);
 				font-weight: 600;
 				font-size: rem(12);
 				line-height: math.div(13, 12);
@@ -160,6 +159,7 @@
 
 				&::before {
 					font-size: rem(18);
+					margin-right: rem(12);
 				}
 			}
 		}
@@ -300,11 +300,13 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	@include adaptiveValue("column-gap", 48, 12);
 	@include adaptiveValue("font-size", 24, 20);
 
 	// .header-controls__item
 	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 48, 12);
+		}
 	}
 
 	// .header-controls__link

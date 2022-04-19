@@ -945,16 +945,6 @@ textarea.form__input {
   scrollbar-width: thin;
   border-bottom: 1px solid #9da7b1;
 }
-@supports (column-gap: clamp( 1.5rem , 0.3314606742rem  +  5.8426966292vw , 4.75rem )) {
-  .tabs__navigation {
-    column-gap: clamp( 1.5rem , 0.3314606742rem  +  5.8426966292vw , 4.75rem );
-  }
-}
-@supports not (column-gap: clamp( 1.5rem , 0.3314606742rem  +  5.8426966292vw , 4.75rem )) {
-  .tabs__navigation {
-    column-gap: calc(1.5rem + 3.25 * (100vw - 20rem) / 55.625);
-  }
-}
 @supports (padding-bottom: clamp( 1.5rem , 0.9606741573rem  +  2.6966292135vw , 3rem )) {
   .tabs__navigation {
     padding-bottom: clamp( 1.5rem , 0.9606741573rem  +  2.6966292135vw , 3rem );
@@ -985,6 +975,16 @@ textarea.form__input {
 @supports not (font-size: clamp( 0.75rem , 0.6601123596rem  +  0.4494382022vw , 1rem )) {
   .tabs__title {
     font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (margin-right: clamp( 1.5rem , 0.3314606742rem  +  5.8426966292vw , 4.75rem )) {
+  .tabs__title:not(:last-child) {
+    margin-right: clamp( 1.5rem , 0.3314606742rem  +  5.8426966292vw , 4.75rem );
+  }
+}
+@supports not (margin-right: clamp( 1.5rem , 0.3314606742rem  +  5.8426966292vw , 4.75rem )) {
+  .tabs__title:not(:last-child) {
+    margin-right: calc(1.5rem + 3.25 * (100vw - 20rem) / 55.625);
   }
 }
 .tabs__title::after {
@@ -1663,6 +1663,11 @@ section:not(:first-child) {
 .template1__btn .btn {
   min-width: 11.25rem;
 }
+@media (max-width: 47.99875em) {
+  .template1__btn .btn {
+    width: 100%;
+  }
+}
 
 .template2__title:not(:last-child) {
   margin-bottom: 2rem;
@@ -2254,7 +2259,6 @@ section:not(:first-child) {
   .header__menu .header-controls__link {
     display: flex;
     align-items: center;
-    column-gap: 0.75rem;
     font-weight: 600;
     font-size: 0.75rem;
     line-height: 1.0833333333;
@@ -2265,6 +2269,7 @@ section:not(:first-child) {
   }
   .header__menu .header-controls__link::before {
     font-size: 1.125rem;
+    margin-right: 0.75rem;
   }
 }
 @media (min-width: 35.93625em) {
@@ -2408,16 +2413,6 @@ section:not(:first-child) {
   justify-content: flex-end;
   align-items: center;
 }
-@supports (column-gap: clamp( 0.75rem , -0.058988764rem  +  4.0449438202vw , 3rem )) {
-  .header-controls {
-    column-gap: clamp( 0.75rem , -0.058988764rem  +  4.0449438202vw , 3rem );
-  }
-}
-@supports not (column-gap: clamp( 0.75rem , -0.058988764rem  +  4.0449438202vw , 3rem )) {
-  .header-controls {
-    column-gap: calc(0.75rem + 2.25 * (100vw - 20rem) / 55.625);
-  }
-}
 @supports (font-size: clamp( 1.25rem , 1.1601123596rem  +  0.4494382022vw , 1.5rem )) {
   .header-controls {
     font-size: clamp( 1.25rem , 1.1601123596rem  +  0.4494382022vw , 1.5rem );
@@ -2426,6 +2421,16 @@ section:not(:first-child) {
 @supports not (font-size: clamp( 1.25rem , 1.1601123596rem  +  0.4494382022vw , 1.5rem )) {
   .header-controls {
     font-size: calc(1.25rem + 0.25 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (margin-right: clamp( 0.75rem , -0.058988764rem  +  4.0449438202vw , 3rem )) {
+  .header-controls__item:not(:last-child) {
+    margin-right: clamp( 0.75rem , -0.058988764rem  +  4.0449438202vw , 3rem );
+  }
+}
+@supports not (margin-right: clamp( 0.75rem , -0.058988764rem  +  4.0449438202vw , 3rem )) {
+  .header-controls__item:not(:last-child) {
+    margin-right: calc(0.75rem + 2.25 * (100vw - 20rem) / 55.625);
   }
 }
 @media (any-hover: hover) {
@@ -3437,7 +3442,6 @@ section:not(:first-child) {
 @media (max-width: 47.99875em) {
   .filter__list {
     display: flex;
-    column-gap: 1.5rem;
     border-bottom: 1px solid #9da7b1;
     overflow-y: hidden;
     overflow-x: auto;
@@ -3446,6 +3450,9 @@ section:not(:first-child) {
   .filter__list::-webkit-scrollbar {
     width: 0;
     height: 0;
+  }
+  .filter__list > *:not(:last-child) {
+    margin-right: 1.5rem;
   }
 }
 @media (max-width: 47.99875em) {
@@ -4443,7 +4450,6 @@ section:not(:first-child) {
 .coupon__row {
   display: grid;
   row-gap: 0.5rem;
-  column-gap: 0.5rem;
 }
 @media (min-width: 61.99875em) {
   .coupon__row {
@@ -4456,8 +4462,19 @@ section:not(:first-child) {
   }
 }
 .coupon__input {
+  display: block;
   background-color: #ffffff;
   min-height: 3rem;
+}
+@media (min-width: 61.99875em) {
+  .coupon__input {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 47.99875em) {
+  .coupon__input {
+    margin-right: 0.5rem;
+  }
 }
 .coupon__btn {
   font-size: 0.875rem;
