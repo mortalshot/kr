@@ -8540,12 +8540,11 @@ PERFORMANCE OF THIS SOFTWARE.
             }
         }
     }));
-    const filterWrapper = document.querySelector(".filter__wrapper");
-    if (filterWrapper) {
+    const filterItems = document.querySelector(".filter__items");
+    if (filterItems) {
         let filterMmd3 = window.matchMedia("(min-width: 767.98px)");
         function filterHandleMmd3Change(e) {
             if (e.matches) {
-                const filterItems = document.querySelector(".filter__items");
                 const header = document.querySelector(".header");
                 filterItems.style.maxHeight = window.innerHeight - header.clientHeight - 100 + "px";
             }
