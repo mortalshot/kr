@@ -5537,6 +5537,137 @@ section:not(:first-child) {
 .edit-info__form .btn {
   width: 100%;
 }
+
+.search__title {
+  text-align: center;
+}
+@supports (margin-bottom: clamp( 1rem , 0.2808988764rem  +  3.595505618vw , 3rem )) {
+  .search__title:not(:last-child) {
+    margin-bottom: clamp( 1rem , 0.2808988764rem  +  3.595505618vw , 3rem );
+  }
+}
+@supports not (margin-bottom: clamp( 1rem , 0.2808988764rem  +  3.595505618vw , 3rem )) {
+  .search__title:not(:last-child) {
+    margin-bottom: calc(1rem + 2 * (100vw - 20rem) / 55.625);
+  }
+}
+.search__search-form {
+  max-width: 48.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@supports (margin-bottom: clamp( 2rem , 1.1011235955rem  +  4.4943820225vw , 4.5rem )) {
+  .search__search-form:not(:last-child) {
+    margin-bottom: clamp( 2rem , 1.1011235955rem  +  4.4943820225vw , 4.5rem );
+  }
+}
+@supports not (margin-bottom: clamp( 2rem , 1.1011235955rem  +  4.4943820225vw , 4.5rem )) {
+  .search__search-form:not(:last-child) {
+    margin-bottom: calc(2rem + 2.5 * (100vw - 20rem) / 55.625);
+  }
+}
+.search__results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+}
+@supports (row-gap: clamp( 1.5rem , 0.9606741573rem  +  2.6966292135vw , 3rem )) {
+  .search__results {
+    row-gap: clamp( 1.5rem , 0.9606741573rem  +  2.6966292135vw , 3rem );
+  }
+}
+@supports not (row-gap: clamp( 1.5rem , 0.9606741573rem  +  2.6966292135vw , 3rem )) {
+  .search__results {
+    row-gap: calc(1.5rem + 1.5 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (column-gap: clamp( 0.625rem , 0.4002808989rem  +  1.1235955056vw , 1.25rem )) {
+  .search__results {
+    column-gap: clamp( 0.625rem , 0.4002808989rem  +  1.1235955056vw , 1.25rem );
+  }
+}
+@supports not (column-gap: clamp( 0.625rem , 0.4002808989rem  +  1.1235955056vw , 1.25rem )) {
+  .search__results {
+    column-gap: calc(0.625rem + 0.625 * (100vw - 20rem) / 55.625);
+  }
+}
+
+.search-form__wrapper {
+  position: relative;
+}
+.search-form__input {
+  padding-right: 4.125rem;
+}
+@supports (padding-right: clamp( 2.625rem , 2.0856741573rem  +  2.6966292135vw , 4.125rem )) {
+  .search-form__input {
+    padding-right: clamp( 2.625rem , 2.0856741573rem  +  2.6966292135vw , 4.125rem );
+  }
+}
+@supports not (padding-right: clamp( 2.625rem , 2.0856741573rem  +  2.6966292135vw , 4.125rem )) {
+  .search-form__input {
+    padding-right: calc(2.625rem + 1.5 * (100vw - 20rem) / 55.625);
+  }
+}
+.search-form__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  color: #9da7b1;
+}
+@supports (font-size: clamp( 1.125rem , 0.9901685393rem  +  0.6741573034vw , 1.5rem )) {
+  .search-form__button {
+    font-size: clamp( 1.125rem , 0.9901685393rem  +  0.6741573034vw , 1.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.9901685393rem  +  0.6741573034vw , 1.5rem )) {
+  .search-form__button {
+    font-size: calc(1.125rem + 0.375 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-left: clamp( 0.5rem , 0.3202247191rem  +  0.8988764045vw , 1rem )) {
+  .search-form__button {
+    padding-left: clamp( 0.5rem , 0.3202247191rem  +  0.8988764045vw , 1rem );
+  }
+}
+@supports not (padding-left: clamp( 0.5rem , 0.3202247191rem  +  0.8988764045vw , 1rem )) {
+  .search-form__button {
+    padding-left: calc(0.5rem + 0.5 * (100vw - 20rem) / 55.625);
+  }
+}
+@supports (padding-right: clamp( 0.5rem , 0.3202247191rem  +  0.8988764045vw , 1rem )) {
+  .search-form__button {
+    padding-right: clamp( 0.5rem , 0.3202247191rem  +  0.8988764045vw , 1rem );
+  }
+}
+@supports not (padding-right: clamp( 0.5rem , 0.3202247191rem  +  0.8988764045vw , 1rem )) {
+  .search-form__button {
+    padding-right: calc(0.5rem + 0.5 * (100vw - 20rem) / 55.625);
+  }
+}
+@media (any-hover: hover) {
+  .search-form__button {
+    transition: 0.3s ease background-color 0s;
+  }
+  .search-form__button:hover {
+    background-color: rgba(157, 167, 177, 0.1);
+  }
+}
+.search-form__label {
+  line-height: 1.2142857143;
+  margin-top: 0.5rem;
+  color: #9da7b1;
+}
+@supports (font-size: clamp( 0.75rem , 0.7050561798rem  +  0.2247191011vw , 0.875rem )) {
+  .search-form__label {
+    font-size: clamp( 0.75rem , 0.7050561798rem  +  0.2247191011vw , 0.875rem );
+  }
+}
+@supports not (font-size: clamp( 0.75rem , 0.7050561798rem  +  0.2247191011vw , 0.875rem )) {
+  .search-form__label {
+    font-size: calc(0.75rem + 0.125 * (100vw - 20rem) / 55.625);
+  }
+}
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }

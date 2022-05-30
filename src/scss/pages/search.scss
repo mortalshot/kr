@@ -1,0 +1,76 @@
+// .banner ====================================================================================================
+.search {
+    // .search__container
+    &__container {
+    }
+    
+    // .search__title
+    &__title {
+        text-align: center;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 48, 16);
+        }
+    }
+
+    // .search__search-form
+    &__search-form {
+        max-width: rem(780);
+        margin-left: auto;
+        margin-right: auto;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 72, 32);
+        }
+    }
+
+    // .search__results
+    &__results {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(rem(280), 1fr));
+        @include adaptiveValue("row-gap", 48, 24);
+        @include adaptiveValue("column-gap", 20, 10);
+    }
+}
+
+.search-form {
+    // .search-form__wrapper
+    &__wrapper {
+        position: relative;
+    }
+
+    // .search-form__input
+    &__input {
+        @include adaptiveValue("padding-right", 66, 42);
+        padding-right: rem(66);
+    }
+
+    // .search-form__button
+    &__button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        @include adaptiveValue("font-size", 24, 18);
+        @include adaptiveValue("padding-left", 16, 8);
+        @include adaptiveValue("padding-right", 16, 8);
+        z-index: 1;
+        color: $Grey;
+
+        @media (any-hover: hover) {
+            transition: $transition ease background-color 0s;
+            
+            &:hover {
+                background-color: rgba($color: $Grey, $alpha: 0.1)
+            }
+        }
+    }
+
+    // .search-form__label
+    &__label {
+        @include adaptiveValue("font-size", 14, 12);
+        line-height: math.div(17, 14);
+        margin-top: rem(8);
+        color: $Grey;
+    }
+}
