@@ -55,6 +55,10 @@ textarea {
 				}
 			}
 		}
+
+		& + .checkbox {
+			margin-top: rem(16);
+		}
 	}
 }
 

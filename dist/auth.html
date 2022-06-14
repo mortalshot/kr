@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Смена пароля</title>
+	<title>Мой аккаунт</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/style.min.css?_v=20220614132113">
@@ -72,34 +72,90 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="edit-info">
-				<div class="edit-info__container">
-					<h1 class="edit-info__title">Смена пароля</h1>
+			<section class="auth">
+				<div class="auth__container">
+					<div data-tabs data-tabs-animate class="tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="submit" class="tabs__title _tab-active">Вход</button>
+							<button type="submit" class="tabs__title ">Регистрация</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<form action="" class="auth__form form">
+									<div class="form__row">
+										<div class="form__item col-12">
+											<label for="auth-username" class="form__label"> Логин:</label>
+											<input id="auth-username" type="text" name="auth-username" placeholder="" class="form__input">
+										</div>
+										<div class="form__item col-12">
+											<label for="auth-password" class="form__label">Пароль:</label>
+											<div class="form__input-wrapper _password">
+												<input id="auth-password" type="password" name="auth-password" placeholder="" class="form__input">
+												<button type="button" class="form__viewpass _icon-password-on"></button>
+											</div>
+											<div class="checkbox">
+												<input id="auth-save" class="checkbox__input" type="checkbox" value="Запомнить меня на этом компьютере" name="auth-save">
+												<label for="auth-save" class="checkbox__label"><span class="checkbox__text">Запомнить меня на этом компьютере</span></label>
+											</div>
+										</div>
+									</div>
 
-					<form action="" class="edit-info__form form">
-						<div class="form__row">
-							<div class="form__item col-12">
-								<label for="edit-password-1" class="form__label">Старый пароль</label>
-								<div class="form__input-wrapper _password">
-									<input id="edit-password-1" type="password" name="edit-password-1" placeholder="" class="form__input">
-									<button type="button" class="form__viewpass _icon-password-on"></button>
-								</div>
+									<div class="form__row">
+										<div class="form__submit col-12">
+											<button type="submit" class="btn btn_black">Войти</button>
+											<div class="auth__link"> <a href="lost-password.html">Забыли свой пароль?</a></div>
+										</div>
+									</div>
+								</form>
 							</div>
-							<div class="form__item col-12">
-								<label for="edit-password-2" class="form__label">Новый пароль</label>
-								<div class="form__input-wrapper _password">
-									<input id="edit-password-2" type="password" name="edit-password-2" placeholder="" class="form__input">
-									<button type="button" class="form__viewpass _icon-password-on"></button>
-								</div>
+							<div class="tabs__body">
+								<form action="" class="auth__form form">
+									<div class="form__row">
+										<div class="form__item col-12">
+											<label for="reg-name" class="form__label"> Имя:</label>
+											<input id="reg-name" type="text" name="reg-name" placeholder="" class="form__input">
+										</div>
+										<div class="form__item col-12">
+											<label for="reg-surname" class="form__label"> Фамилия:</label>
+											<input id="reg-surname" type="text" name="reg-surname" placeholder="" class="form__input">
+										</div>
+										<div class="form__item col-12">
+											<label for="reg-username" class="form__label"> *Логин (мин. 3 символа):</label>
+											<input id="reg-username" type="text" name="reg-username" placeholder="" class="form__input" required>
+										</div>
+										<div class="form__item col-12">
+											<label for="reg-password-1" class="form__label">*Пароль:</label>
+											<div class="form__input-wrapper _password">
+												<input id="reg-password-1" type="password" name="reg-password-1" placeholder="" class="form__input" required>
+												<button type="button" class="form__viewpass _icon-password-on"></button>
+											</div>
+										</div>
+										<div class="form__item col-12">
+											<label for="reg-password-2" class="form__label"> *Подтверждение пароля:</label>
+											<div class="form__input-wrapper _password">
+												<input id="reg-password-2" type="password" name="reg-password-2" placeholder="" class="form__input" required>
+												<button type="button" class="form__viewpass _icon-password-on"></button>
+											</div>
+										</div>
+										<div class="form__item col-12">
+											<label for="reg-mail" class="form__label">*Почта</label>
+											<input id="reg-mail" type="text" name="reg-mail" placeholder="" class="form__input" value="" data-placeholder="" required>
+										</div>
+									</div>
+
+									<div class="form__row">
+										<div class="form__submit col-12">
+											<button type="submit" class="btn btn_black">Войти</button>
+											<div class="checkbox">
+												<input id="auth-privacy" class="checkbox__input" type="checkbox" value=" Нажимая на кнопку, я принимаю условия соглашения." name="auth-privacy">
+												<label for="auth-privacy" class="checkbox__label"><span class="checkbox__text"> Нажимая на кнопку, я принимаю <a href="privacy.html">условия соглашения.</a></span></label>
+											</div>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
-						<div class="form__row">
-							<div class="form__actions col-12">
-								<button type="submit" class="btn btn_black">Сохранить</button>
-								<a href="profile.html" class="btn btn_border-white">Отменить</a>
-							</div>
-						</div>
-					</form>
+					</div>
 				</div>
 			</section>
 		</main>

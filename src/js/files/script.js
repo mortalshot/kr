@@ -70,3 +70,17 @@ if (filterItems) {
     filterMmd3.addEventListener('change', filterHandleMmd3Change);
     filterHandleMmd3Change(filterMmd3);
 }
+
+// Уведомление о действии
+function notification(id) {
+    id.style.opacity = 1;
+    id.style.top = 60 + "px";
+
+    setTimeout(() => {
+        id.style.opacity = 0;
+        id.style.top = -100 + "%";
+    }, 3000);
+}
+
+const toFavorites = document.querySelector('#to-favorites');
+notification(toFavorites);

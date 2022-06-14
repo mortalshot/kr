@@ -10,6 +10,11 @@ h {
         @include adaptiveValue("font-size", 50, 24);
         line-height: math.div(72, 50);
     }
+    &3 {
+        font-weight: 600;
+        @include adaptiveValue("font-size", 20, 18);
+        line-height: math.div(24, 20);
+    }
 }
 
 img,
@@ -325,6 +330,42 @@ section {
     }
 }
 
+// .notification ====================================================================================================
+.notification {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+    opacity: 0;
+    z-index: 51;
+    transition: 0.8s ease top, 0.8s opacity 0s;
+
+    // .notification__wrapper
+    &__wrapper {
+        display: inline-flex;
+        align-items: center;
+        padding: rem(16);
+        background: rgba(26, 30, 34, 0.94);
+        border-radius: rem(10);
+        color: $White;
+    }
+
+    // .notification__icon
+    &__icon {
+        max-width: rem(24);
+
+        &:not(:last-child) {
+            margin-right: rem(18);
+        }
+    }
+
+    // .notification__text
+    &__text {
+    }
+}
+
 // Анимации
 @keyframes shake-bottom {
     0%,
@@ -458,8 +499,8 @@ section {
         .btn {
             min-width: rem(180);
 
-            @media (max-width:$mobile){
-                 width: 100%; 
+            @media (max-width: $mobile) {
+                width: 100%;
             }
         }
     }

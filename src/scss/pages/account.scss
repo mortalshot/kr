@@ -545,7 +545,7 @@
     &:first-child {
         @include adaptiveValue("padding-top", 56, 24);
     }
-    
+
     // .edit-info__container
     &__container {
         max-width: rem(380);
@@ -597,11 +597,67 @@
             &__actions {
                 display: grid;
                 row-gap: rem(16);
+
+                &:not(:last-child) {
+                    margin-bottom: rem(24);
+                }
             }
         }
 
         .btn {
             width: 100%;
+        }
+    }
+}
+
+// .auth ====================================================================================================
+.auth {
+    &:first-child {
+        @include adaptiveValue("padding-top", 56, 24);
+    }
+
+    // .auth__container
+    &__container {
+        max-width: rem(418);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // .auth__heading
+    &__heading {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 32, 24);
+        }
+    }
+
+    .tabs__body {
+        .auth__form {
+            padding-top: rem(24);
+        }
+    }
+
+    // .auth__form
+    &__form {
+    }
+
+    .form__submit {
+        display: grid;
+        gap: rem(16);
+
+        &:not(:last-child) {
+            margin-bottom: rem(16);
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    // .auth__link
+    &__link {
+        a {
+            @extend %linkDecoration;
+            color: $Blue;
         }
     }
 }
