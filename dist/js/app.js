@@ -8302,16 +8302,7 @@ PERFORMANCE OF THIS SOFTWARE.
         filterMmd3.addEventListener("change", filterHandleMmd3Change);
         filterHandleMmd3Change(filterMmd3);
     }
-    function notification(id) {
-        id.style.opacity = 1;
-        id.style.top = 60 + "px";
-        setTimeout((() => {
-            id.style.opacity = 0;
-            id.style.top = -100 + "%";
-        }), 3e3);
-    }
-    const toFavorites = document.querySelector("#to-favorites");
-    notification(toFavorites);
+    document.querySelector("#to-favorites");
     window["FLS"] = true;
     isWebp();
     addLoadedClass();

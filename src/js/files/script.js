@@ -83,4 +83,3 @@ function notification(id) {
 }
 
 const toFavorites = document.querySelector('#to-favorites');
-notification(toFavorites);

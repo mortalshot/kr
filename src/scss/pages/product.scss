@@ -195,6 +195,13 @@
         }
     }
 
+    // .catalog__body
+    &__body {
+        @media (min-width: $mobile) {
+            min-height: rem(650);
+        }
+    }
+
     // .catalog__list
     &__list {
         display: grid;

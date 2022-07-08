@@ -147,7 +147,7 @@
 			}
 
 			.header-controls__link {
-				display: flex;
+				display: inline-flex;
 				align-items: center;
 				font-weight: 600;
 				font-size: rem(12);
@@ -160,6 +160,11 @@
 				&::before {
 					font-size: rem(18);
 					margin-right: rem(12);
+				}
+				&::after {
+					right: auto;
+					left: rem(12);
+					top: rem(6);
 				}
 			}
 		}
@@ -322,6 +327,24 @@
 		span {
 			@media (min-width: $mobileM) {
 				display: none;
+			}
+		}
+
+		// .header-controls__link_filled
+		&_filled {
+			position: relative;
+
+			&::after {
+				content: "";
+				display: block;
+				width: rem(8);
+				height: rem(8);
+				position: absolute;
+				right: rem(-4);
+				top: 0;
+				border-radius: 50%;
+				background-color: $Red;
+				pointer-events: none;
 			}
 		}
 	}
