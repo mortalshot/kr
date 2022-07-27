@@ -5,7 +5,7 @@
 	<title>Каталог</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220708152624">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220727122612">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,12 +102,45 @@
 								</select>
 							</form>
 
-							<button class="catalog__filter-btn btn btn_border-black _icon-filter">Фильтры</button>
+							<button class="catalog__filter-btn btn btn_border-black _icon-filter" data-value="5">Фильтры</button>
+
+							<div class="filter-selected">
+								<div class="filter-selected__item">
+									<a href="" class="filter-selected__item-wrapper">
+										<span>Раздельный</span>
+										<i class="_icon-remove"></i>
+									</a>
+								</div>
+								<div class="filter-selected__item">
+									<a href="" class="filter-selected__item-wrapper">
+										<span>XL</span>
+										<i class="_icon-remove"></i>
+									</a>
+								</div>
+								<div class="filter-selected__item">
+									<a href="" class="filter-selected__item-wrapper">
+										<span>M</span>
+										<i class="_icon-remove"></i>
+									</a>
+								</div>
+								<div class="filter-selected__item">
+									<a href="" class="filter-selected__item-wrapper">
+										<span>Красный</span>
+										<i class="_icon-remove"></i>
+									</a>
+								</div>
+								<div class="filter-selected__item">
+									<a href="" class="filter-selected__item-wrapper">
+										<span>1 000 ₽ — 2 500 ₽</span>
+										<i class="_icon-remove"></i>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="catalog__row" data-sticky="767.98, min" data-sticky-header>
+					<div class="catalog__row">
 						<div class="catalog__left catalog__sidebar">
-							<form action="" class="catalog__filter filter" data-sticky-item>
+							<form action="" class="catalog__filter filter">
 								<div class="filter__wrapper">
 									<div class="filter__caption">Фильтр</div>
 
@@ -244,6 +277,11 @@
 											</div>
 										</div>
 									</div>
+
+									<div class="filter__buttons">
+										<button type="submit" class="filter__button btn btn_black">Применить</button>
+										<button type="reset" class="filter__button btn btn_border-white">Сбросить</button>
+									</div>
 								</div>
 							</form>
 
@@ -251,103 +289,103 @@
 						</div>
 
 						<div class="catalog__right catalog__body">
-							<!-- <div class="catalog__list">
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-1-1.webp" type="image/webp"><img src="img/products/product-1-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Купальник цельный, чёрный</div>
-                                            <div class="product-card__price price">
-                                                <span class="price__new">8 990 ₽</span>
-                                                <span class="price__old">14 990 ₽</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-2-1.webp" type="image/webp"><img src="img/products/product-2-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Собрал текстов реторический за большой?</div>
-                                            <div class="product-card__price price"> 101 990 ₽</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-3-1.webp" type="image/webp"><img src="img/products/product-3-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Купальник</div>
-                                            <div class="product-card__price price">
-                                                <span class="price__new">23 990 ₽</span>
-                                                <span class="price__old">25 990 ₽</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-4-1.webp" type="image/webp"><img src="img/products/product-4-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Купальник цельный, чёрный</div>
-                                            <div class="product-card__price price">
-                                                <span class="price__new">8 990 ₽</span>
-                                                <span class="price__old">14 990 ₽</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-5-1.webp" type="image/webp"><img src="img/products/product-5-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Далеко-далеко</div>
-                                            <div class="product-card__price price">
-                                                <span class="price__new">23 990 ₽</span>
-                                                <span class="price__old">25 990 ₽</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-6-1.webp" type="image/webp"><img src="img/products/product-6-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Купальник</div>
-                                            <div class="product-card__price price">
-                                                <span class="price__new">23 990 ₽</span>
-                                                <span class="price__old">25 990 ₽</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="single-product.html" class="product-card">
-                                    <div class="product-card__wrapper">
-                                        <div class="product-card__thumb">
-                                            <picture><source srcset="img/products/product-7-1.webp" type="image/webp"><img src="img/products/product-7-1.jpg" alt="" loading="lazy"></picture>
-                                        </div>
-                                        <div class="product-card__body">
-                                            <div class="product-card__name">Купальник</div>
-                                            <div class="product-card__price price">
-                                                <span class="price__new">23 990 ₽</span>
-                                                <span class="price__old">25 990 ₽</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div> -->
+							<div class="catalog__list">
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-1-1.webp" type="image/webp"><img src="img/products/product-1-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Купальник цельный, чёрный</div>
+											<div class="product-card__price price">
+												<span class="price__new">8 990 ₽</span>
+												<span class="price__old">14 990 ₽</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-2-1.webp" type="image/webp"><img src="img/products/product-2-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Собрал текстов реторический за большой?</div>
+											<div class="product-card__price price"> 101 990 ₽</div>
+										</div>
+									</div>
+								</a>
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-3-1.webp" type="image/webp"><img src="img/products/product-3-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Купальник</div>
+											<div class="product-card__price price">
+												<span class="price__new">23 990 ₽</span>
+												<span class="price__old">25 990 ₽</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-4-1.webp" type="image/webp"><img src="img/products/product-4-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Купальник цельный, чёрный</div>
+											<div class="product-card__price price">
+												<span class="price__new">8 990 ₽</span>
+												<span class="price__old">14 990 ₽</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-5-1.webp" type="image/webp"><img src="img/products/product-5-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Далеко-далеко</div>
+											<div class="product-card__price price">
+												<span class="price__new">23 990 ₽</span>
+												<span class="price__old">25 990 ₽</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-6-1.webp" type="image/webp"><img src="img/products/product-6-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Купальник</div>
+											<div class="product-card__price price">
+												<span class="price__new">23 990 ₽</span>
+												<span class="price__old">25 990 ₽</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="single-product.html" class="product-card">
+									<div class="product-card__wrapper">
+										<div class="product-card__thumb">
+											<picture><source srcset="img/products/product-7-1.webp" type="image/webp"><img src="img/products/product-7-1.jpg" alt="" loading="lazy"></picture>
+										</div>
+										<div class="product-card__body">
+											<div class="product-card__name">Купальник</div>
+											<div class="product-card__price price">
+												<span class="price__new">23 990 ₽</span>
+												<span class="price__old">25 990 ₽</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
 
 							<a href="" class="catalog__btn btn btn_border-white">Показать ещё</a>
 						</div>
@@ -480,7 +518,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220708152624"></script>
+	<script src="js/app.min.js?_v=20220727122612"></script>
 </body>
 
 </html>

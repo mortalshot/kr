@@ -38,12 +38,45 @@
                                 </select>
                             </form>
 
-                            <button class="catalog__filter-btn btn btn_border-black _icon-filter">Фильтры</button>
+                            <button class="catalog__filter-btn btn btn_border-black _icon-filter" data-value="5">Фильтры</button>
+
+                            <div class="filter-selected">
+                                <div class="filter-selected__item">
+                                    <a href="" class="filter-selected__item-wrapper">
+                                        <span>Раздельный</span>
+                                        <i class="_icon-remove"></i>
+                                    </a>
+                                </div>
+                                <div class="filter-selected__item">
+                                    <a href="" class="filter-selected__item-wrapper">
+                                        <span>XL</span>
+                                        <i class="_icon-remove"></i>
+                                    </a>
+                                </div>
+                                <div class="filter-selected__item">
+                                    <a href="" class="filter-selected__item-wrapper">
+                                        <span>M</span>
+                                        <i class="_icon-remove"></i>
+                                    </a>
+                                </div>
+                                <div class="filter-selected__item">
+                                    <a href="" class="filter-selected__item-wrapper">
+                                        <span>Красный</span>
+                                        <i class="_icon-remove"></i>
+                                    </a>
+                                </div>
+                                <div class="filter-selected__item">
+                                    <a href="" class="filter-selected__item-wrapper">
+                                        <span>1 000 ₽ — 2 500 ₽</span>
+                                        <i class="_icon-remove"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="catalog__row" data-sticky="767.98, min" data-sticky-header>
+                    <div class="catalog__row">
                         <div class="catalog__left catalog__sidebar">
-                            <form action="" class="catalog__filter filter" data-sticky-item>
+                            <form action="" class="catalog__filter filter">
                                 <div class="filter__wrapper">
                                     <div class="filter__caption">Фильтр</div>
 
@@ -179,6 +212,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div class="filter__buttons">
+                                        <button type="submit" class="filter__button btn btn_black">Применить</button>
+                                        <button type="reset" class="filter__button btn btn_border-white">Сбросить</button>
                                     </div>
                                 </div>
                             </form>

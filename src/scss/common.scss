@@ -266,7 +266,6 @@ section {
     &__arrows {
         display: flex;
         align-items: center;
-        @include adaptiveValue("column-gap", 16, 0);
     }
 
     // .pagination__arrow
@@ -280,6 +279,10 @@ section {
         font-weight: 500;
         font-size: rem(20);
         color: $Grey;
+
+        &:not(:last-child) {
+            @include adaptiveValue("margin-right", 16, 0);
+        }
 
         a {
             display: inline-flex;
