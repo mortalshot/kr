@@ -3419,6 +3419,11 @@ section:not(:first-child) {
   }
 }
 
+@media (any-hover: hover) {
+  .product-card:hover .product-card__remove {
+    opacity: 1;
+  }
+}
 .product-card__wrapper {
   display: grid;
   row-gap: 1rem;
@@ -3434,6 +3439,22 @@ section:not(:first-child) {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.product-card__remove {
+  position: absolute;
+  top: 0.3125rem;
+  right: 0.3125rem;
+  z-index: 2;
+  font-size: 1.75rem;
+  padding: 0.3125rem;
+  outline: none;
+  opacity: 0;
+  transition: 0.3s ease opacity 0s;
+}
+@media (any-hover: hover) {
+  .product-card__remove:hover {
+    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  }
 }
 .product-card__body {
   display: grid;
