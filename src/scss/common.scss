@@ -647,6 +647,16 @@ section {
         }
     }
 }
+.img-trio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    gap: rem(10);
+}
+.img-quart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(10);
+}
 
 // .faq ====================================================================================================
 .faq {

@@ -1904,6 +1904,18 @@ section:not(:first-child) {
   }
 }
 
+.img-trio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+  gap: 0.625rem;
+}
+
+.img-quart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+}
+
 @supports (padding-top: clamp( 1.5rem , 0.7808988764rem  +  3.595505618vw , 3.5rem )) {
   .faq:first-child {
     padding-top: clamp( 1.5rem , 0.7808988764rem  +  3.595505618vw , 3.5rem );
@@ -3448,10 +3460,12 @@ section:not(:first-child) {
   font-size: 1.75rem;
   padding: 0.3125rem;
   outline: none;
-  opacity: 0;
   transition: 0.3s ease opacity 0s;
 }
 @media (any-hover: hover) {
+  .product-card__remove {
+    opacity: 0;
+  }
   .product-card__remove:hover {
     animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   }

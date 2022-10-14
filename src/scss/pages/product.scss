@@ -324,10 +324,11 @@
         font-size: rem(28);
         padding: rem(5);
         outline: none;
-        opacity: 0;
         transition: $transition ease opacity 0s;
 
         @media (any-hover: hover) {
+            opacity: 0;
+
             &:hover {
                 animation: shake-bottom 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
             }
