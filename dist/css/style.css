@@ -1183,22 +1183,14 @@ video {
   content: counter(item) "." counters(subitem, ".") " ";
   counter-increment: subitem;
 }
+._content ul {
+  padding-left: 1.25rem;
+}
 ._content ul li {
+  list-style-type: disc;
   position: relative;
-  padding-left: 2.375rem;
-}
-@supports (padding-left: clamp( 1.875rem , 1.6952247191rem  +  0.8988764045vw , 2.375rem )) {
-  ._content ul li {
-    padding-left: clamp( 1.875rem , 1.6952247191rem  +  0.8988764045vw , 2.375rem );
-  }
-}
-@supports not (padding-left: clamp( 1.875rem , 1.6952247191rem  +  0.8988764045vw , 2.375rem )) {
-  ._content ul li {
-    padding-left: calc(1.875rem + 0.5 * (100vw - 20rem) / 55.625);
-  }
 }
 ._content ul li::before {
-  content: "\e91c";
   position: absolute;
   left: 0;
   top: 0.125rem;
@@ -4165,6 +4157,7 @@ section:not(:first-child) {
 }
 .product-body__tags {
   display: grid;
+  align-content: flex-start;
 }
 @supports (row-gap: clamp( 0.75rem , 0.3005617978rem  +  2.2471910112vw , 2rem )) {
   .product-body__tags {

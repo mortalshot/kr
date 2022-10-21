@@ -1119,6 +1119,7 @@ a.product-card {
     &__tags {
         display: grid;
         @include adaptiveValue("row-gap", 32, 12);
+        align-content: flex-start;
     }
 
     // .product-body__tag

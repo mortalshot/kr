@@ -81,13 +81,16 @@ video {
     }
 
     ul {
+        padding-left: rem(20);
+        // @include adaptiveValue("padding-left", 38, 30);
+
         li {
+            list-style-type: disc;
             position: relative;
-            @include adaptiveValue("padding-left", 38, 30);
-            padding-left: rem(38);
+            // padding-left: rem(38);
 
             &::before {
-                content: "\e91c";
+                // content: "\e91c";
                 @extend %ic;
                 position: absolute;
                 left: 0;
