@@ -282,6 +282,37 @@
 			@extend %linkDecorationHover;
 		}
 	}
+
+	.select {
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 100%;
+		opacity: 0;
+		pointer-events: none;
+		transition: $transition ease opacity 0s;
+
+		&._active {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+
+	.select__input {
+		&:focus {
+			outline: 0;
+
+			&::placeholder {
+				opacity: 1 !important;
+			}
+		}
+	}
+
+	.select__value {
+		&::after {
+			display: none;
+		}
+	}
 }
 
 .logo {

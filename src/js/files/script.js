@@ -39,6 +39,9 @@ function documentActions(e) {
         sidebar.classList.remove('_active');
         bodyUnlock();
     }
+    if (!targetElement.closest('.header__language') && document.querySelector('.select')) {
+        document.querySelector('.select').classList.remove('_active');
+    }
 }
 
 const attributeItems = document.querySelectorAll('.cart-item__number');
@@ -83,3 +86,21 @@ function notification(id) {
 }
 
 const toFavorites = document.querySelector('#to-favorites');
+
+// Выбор языка сайта
+// Открываем поиск языка
+const languageLink = document.querySelector('.language__link');
+if (languageLink) {
+    languageLink.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const select = document.querySelector('.header__language .select');
+
+        select.classList.toggle('_active');
+        languageLink.classList.toggle('_spoller-active');
+
+        const selectInput = select.querySelector('.select__input');
+        selectInput.focus();
+        selectInput.click();
+    })
+}

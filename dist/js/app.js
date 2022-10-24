@@ -8278,6 +8278,7 @@ PERFORMANCE OF THIS SOFTWARE.
             sidebar.classList.remove("_active");
             bodyUnlock();
         }
+        if (!targetElement.closest(".header__language") && document.querySelector(".select")) document.querySelector(".select").classList.remove("_active");
     }
     const attributeItems = document.querySelectorAll(".cart-item__number");
     if (attributeItems.length > 0) document.addEventListener("selectCallback", (function(e) {
@@ -8303,6 +8304,16 @@ PERFORMANCE OF THIS SOFTWARE.
         filterHandleMmd3Change(filterMmd3);
     }
     document.querySelector("#to-favorites");
+    const languageLink = document.querySelector(".language__link");
+    if (languageLink) languageLink.addEventListener("click", (function(e) {
+        e.preventDefault();
+        const select = document.querySelector(".header__language .select");
+        select.classList.toggle("_active");
+        languageLink.classList.toggle("_spoller-active");
+        const selectInput = select.querySelector(".select__input");
+        selectInput.focus();
+        selectInput.click();
+    }));
     window["FLS"] = true;
     isWebp();
     addLoadedClass();

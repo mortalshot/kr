@@ -2445,6 +2445,28 @@ section:not(:first-child) {
 .language__sub-menu a {
   font-weight: 500;
 }
+.language .select {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease opacity 0s;
+}
+.language .select._active {
+  opacity: 1;
+  pointer-events: all;
+}
+.language .select__input:focus {
+  outline: 0;
+}
+.language .select__input:focus::placeholder {
+  opacity: 1 !important;
+}
+.language .select__value::after {
+  display: none;
+}
 
 .logo__link {
   display: inline-block;
