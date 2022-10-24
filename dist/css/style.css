@@ -4145,19 +4145,19 @@ section:not(:first-child) {
   align-content: flex-start;
   row-gap: 1.5rem;
 }
-@supports (column-gap: clamp( 1rem , 0.1460674157rem  +  4.2696629213vw , 3.375rem )) {
+@supports (column-gap: clamp( 1rem , -2.5625rem  +  7.421875vw , 3.375rem )) {
   .product-body__wrapper {
-    column-gap: clamp( 1rem , 0.1460674157rem  +  4.2696629213vw , 3.375rem );
+    column-gap: clamp( 1rem , -2.5625rem  +  7.421875vw , 3.375rem );
   }
 }
-@supports not (column-gap: clamp( 1rem , 0.1460674157rem  +  4.2696629213vw , 3.375rem )) {
+@supports not (column-gap: clamp( 1rem , -2.5625rem  +  7.421875vw , 3.375rem )) {
   .product-body__wrapper {
-    column-gap: calc(1rem + 2.375 * (100vw - 20rem) / 55.625);
+    column-gap: calc(1rem + 2.375 * (100vw - 48rem) / 32);
   }
 }
 @media (min-width: 47.99875em) {
   .product-body__wrapper {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 65% 35%;
   }
 }
 .product-body__text {

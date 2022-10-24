@@ -1093,10 +1093,10 @@ a.product-card {
         display: grid;
         align-content: flex-start;
         row-gap: rem(24);
-        @include adaptiveValue("column-gap", 54, 16);
+        @include adaptiveValue("column-gap", 54, 16, 1280, 768, 1);
 
         @media (min-width: $mobile) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 65% 35%;
         }
     }
 
