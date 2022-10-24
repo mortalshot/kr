@@ -8278,7 +8278,10 @@ PERFORMANCE OF THIS SOFTWARE.
             sidebar.classList.remove("_active");
             bodyUnlock();
         }
-        if (!targetElement.closest(".header__language") && document.querySelector(".select")) document.querySelector(".select").classList.remove("_active");
+        if (!targetElement.closest(".header__language") && document.querySelector(".select")) {
+            document.querySelector(".select").classList.remove("_active");
+            document.querySelector(".language__link").classList.toggle("_spoller-active");
+        }
     }
     const attributeItems = document.querySelectorAll(".cart-item__number");
     if (attributeItems.length > 0) document.addEventListener("selectCallback", (function(e) {
