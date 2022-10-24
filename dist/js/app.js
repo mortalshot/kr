@@ -8280,7 +8280,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }
         if (!targetElement.closest(".header__language") && document.querySelector(".select")) {
             document.querySelector(".select").classList.remove("_active");
-            document.querySelector(".language__link").classList.toggle("_spoller-active");
+            document.querySelector(".language__link").classList.remove("_spoller-active");
         }
     }
     const attributeItems = document.querySelectorAll(".cart-item__number");
